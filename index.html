@@ -135,7 +135,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 
 <header class="hero">
   <div class="wrap" style="padding-bottom:0">
-    <div style="font-size:.85rem;opacity:.85">🇹🇭 สวัสดีกรุงเทพฯ ・ 10 人導遊接團</div>
+    <div style="font-size:.85rem;opacity:.85">🇹🇭 สวัสดีกรุงเทพฯ ・ 11 人導遊接團</div>
     <h1>曼谷五天四夜旅遊手冊</h1>
     <div class="sub">2027/2/20（六）～ 2/24（三）｜高雄 ⇄ 曼谷</div>
     <div class="mems">👥 <span class="mem">臻</span><span class="mem">橋本</span><span class="mem">老王<small>×3</small></span><span class="mem">勳</span><span class="mem">慈耘</span><span class="mem">儒旻</span><span class="mem">力芳<small>×2</small></span><span class="mem">郁嘉</span></div>
@@ -331,7 +331,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
       <p class="small" style="margin-top:0">想看古城遺跡可以用這個取代洽圖洽（大皇宮在 Day 4，不受影響）。</p>
       <table>
         <tr><th>時段</th><th>安排</th><th>說明</th></tr>
-        <tr><td>早上</td><td>出發</td><td><b>火車：</b>MRT 藍線到 Bang Sue 站，轉 Krung Thep Aphiwat 中央車站搭火車，約 50～75 分，30～70 泰銖<br><b>包車：</b>10 人同行最方便，單程約 1～1.5 小時，可請導遊介紹</td></tr>
+        <tr><td>早上</td><td>出發</td><td><b>火車：</b>MRT 藍線到 Bang Sue 站，轉 Krung Thep Aphiwat 中央車站搭火車，約 50～75 分，30～70 泰銖<br><b>包車：</b>11 人同行最方便，單程約 1～1.5 小時，可請導遊介紹</td></tr>
         <tr><td>上午～下午</td><td>古城遺跡</td><td>瑪哈泰寺（樹根裡的佛頭）、帕席桑碧寺、柴瓦塔那蘭寺；景點分散，現場可包嘟嘟車</td></tr>
         <tr><td>傍晚</td><td>回曼谷</td><td>回程接夜市或泰拳比賽（今天萬佛節禁酒）</td></tr>
       </table>
@@ -411,7 +411,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
       <li><b>MRT 地鐵</b>（老城區、唐人街、Jodd Fairs）：直接刷<b>有感應功能</b>的 Visa／Mastercard／UnionPay，進出站刷同一張。出發前確認卡片有感應標誌，也問一下海外手續費</li>
       <li><b>BTS 空鐵</b>（商場、Thong Lo）：還不能刷信用卡，買<b>單程票</b>就好（售票機投零錢或紙鈔）</li>
       <li><b>Rabbit 卡</b>：只能搭 BTS，辦卡約 220 泰銖（120 製卡費＋至少儲值 100）、要帶護照；只待 5 天不太划算</li>
-      <li><b>10 人一起移動</b>：Grab 一般車一台坐 3～4 人，10 人要叫 <b>3 台</b>；或叫 6 人座的 <b>GrabCar XL／大車</b> 2 台。多台車時把目的地分享給每台、約好下車集合點；尖峰時段 Sukhumvit 很塞，近的地方搭捷運反而快。自由活動日可以分 2～3 組各自行動</li>
+      <li><b>11 人一起移動</b>：Grab 一般車一台坐 3～4 人，11 人要叫 <b>3 台</b>；或叫 6 人座的 <b>GrabCar XL／大車</b> 2 台。多台車時把目的地分享給每台、約好下車集合點；尖峰時段 Sukhumvit 很塞，近的地方搭捷運反而快。自由活動日可以分 2～3 組各自行動</li>
     </ul>
     <p class="small" style="margin-bottom:0">詳細路線與各線付費方式見 <a href="transit.html">🚇 捷運分頁</a>。</p>
   </div>
@@ -441,8 +441,8 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 
   <div class="card">
     <h3 style="margin-top:0">🧾 共同記帳・分帳</h3>
-    <div class="small" style="margin-bottom:8px">成員（逗號分隔，會記住）</div>
-    <input id="members" placeholder="例如：Karen, 小美, 阿明…">
+    <div class="small" style="margin-bottom:8px">成員（逗號分隔，會記住；同一家人一起算寫「名字×人數」，例：老王×3）</div>
+    <input id="members" placeholder="例如：臻, 老王×3, 力芳×2…">
     <div class="grid2" style="margin-top:8px">
       <input id="lgItem" placeholder="項目（例：按摩、Grab）">
       <input id="lgAmt" type="number" inputmode="decimal" placeholder="金額（泰銖）">
@@ -738,13 +738,17 @@ document.getElementById('quickThb').onclick=e=>{const b=e.target.closest('button
 
 /* ---------- ledger ---------- */
 const mEl=document.getElementById('members');
-mEl.value=store.get('members','');
+const DEF_MEM='臻, 橋本, 老王×3, 勳, 慈耘, 儒旻, 力芳×2, 郁嘉';
+mEl.value=store.get('members','')||DEF_MEM;
 let ledger=store.get('ledger',[]);
-function members(){return mEl.value.split(/[,，、]/).map(s=>s.trim()).filter(Boolean)}
+function parseM(){return mEl.value.split(/[,，、]/).map(s=>s.trim()).filter(Boolean).map(s=>{const m=s.match(/^(.+?)\s*[×xX＊*]\s*(\d+)\s*(人)?$/);return m?{n:m[1].trim(),w:+m[2]}:{n:s,w:1}})}
+function members(){return parseM().map(o=>o.n)}
+function weight(n){const o=parseM().find(o=>o.n===n);return o?o.w:1}
+function label(n){const w=weight(n);return w>1?`${n}（${w}人）`:n}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function fillSel(){const ms=members();
-  document.getElementById('lgPayer').innerHTML=ms.length?ms.map(m=>`<option>${esc(m)}</option>`).join(''):'<option value="">先輸入成員</option>';
-  document.getElementById('lgSplit').innerHTML='<option value="all">全員平分</option>'+ms.map(m=>`<option value="${esc(m)}">只算 ${esc(m)}</option>`).join('')}
+  document.getElementById('lgPayer').innerHTML=ms.length?ms.map(m=>`<option value="${esc(m)}">${esc(label(m))}</option>`).join(''):'<option value="">先輸入成員</option>';
+  document.getElementById('lgSplit').innerHTML='<option value="all">全員平分（按人頭）</option>'+ms.map(m=>`<option value="${esc(m)}">只算 ${esc(label(m))}</option>`).join('')}
 function renderLedger(){
   const ms=members();
   document.getElementById('ledgerList').innerHTML=ledger.map((x,i)=>`<div class="it"><span>${esc(x.item)}<br><span class="small">${esc(x.payer)} 付・${x.split==='all'?'全員平分':'只算 '+esc(x.split)}</span></span><span>฿${x.amt.toLocaleString()} <button class="x" data-i="${i}">✕</button></span></div>`).join('')||'<div class="small">還沒有記錄</div>';
@@ -752,8 +756,8 @@ function renderLedger(){
   document.getElementById('ledgerSum').textContent=ledger.length?`總計 ฿${total.toLocaleString()}（≈ NT$${Math.round(total*r).toLocaleString()}）`:'';
   const bal={};ms.forEach(m=>bal[m]=0);
   ledger.forEach(x=>{if(bal[x.payer]===undefined)bal[x.payer]=0;bal[x.payer]+=x.amt;
-    const who=x.split==='all'?ms:[x.split];if(!who.length)return;const each=x.amt/who.length;who.forEach(w=>{if(bal[w]===undefined)bal[w]=0;bal[w]-=each})});
-  document.getElementById('balance').innerHTML=ledger.length?Object.entries(bal).map(([k,v])=>`<div>${esc(k)}<br><span class="${v>=0?'pos':'neg'}">${v>=0?'應收':'應付'} ฿${Math.abs(Math.round(v)).toLocaleString()}</span></div>`).join(''):'';
+    const who=x.split==='all'?ms:[x.split];if(!who.length)return;const tw=x.split==='all'?who.reduce((a,w)=>a+weight(w),0):1;who.forEach(w=>{if(bal[w]===undefined)bal[w]=0;bal[w]-=x.amt*(x.split==='all'?weight(w):1)/tw})});
+  document.getElementById('balance').innerHTML=ledger.length?Object.entries(bal).map(([k,v])=>`<div>${esc(label(k))}<br><span class="${v>=0?'pos':'neg'}">${v>=0?'應收':'應付'} ฿${Math.abs(Math.round(v)).toLocaleString()}</span></div>`).join(''):'';
 }
 document.getElementById('ledgerList').onclick=e=>{const b=e.target.closest('.x');if(b){ledger.splice(+b.dataset.i,1);store.set('ledger',ledger);renderLedger()}};
 mEl.oninput=()=>{store.set('members',mEl.value);fillSel();renderLedger()};
