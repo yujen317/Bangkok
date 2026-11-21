@@ -124,6 +124,8 @@ input,select{font:inherit;border:1px solid var(--line);border-radius:10px;paddin
 footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 .toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
 .small{font-size:.82rem;color:var(--muted)}
+.optbox{background:#faf5ec;border:1px dashed var(--line);border-radius:12px;padding:4px 12px;margin-top:8px}
+.opth{font-size:.85rem;font-weight:700;color:var(--orchid);padding-top:6px}
 .mp{text-decoration:none;font-size:.8rem;white-space:nowrap;margin-left:2px;font-weight:600}
 </style>
 </head>
@@ -153,6 +155,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
   <a href="#shop">🛍️ 購物</a>
   <a href="night.html">🌙 夜市</a>
   <a href="#tips">⚠️ 提醒</a>
+  <a href="#sos">🆘 緊急</a>
   <a href="#train">🚂 美功火車</a>
 </nav>
 
@@ -520,11 +523,37 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 <!-- ============ 提醒 ============ -->
 <section id="tips">
   <h2>⚠️ 重要提醒</h2>
+  <div class="card">
+    <h3 style="margin-top:0">🛂 入境泰國要準備</h3>
+    <ul style="padding-left:18px;margin:0">
+      <li><b>TDAC 泰國數位入境卡：</b>每人都要填，抵達前 72 小時內（2/17 之後）上 <a href="https://tdac.immigration.go.th" target="_blank" rel="noopener">tdac.immigration.go.th</a> 免費申請，存好 QR Code</li>
+      <li><b>免簽：</b>台灣護照免簽，每次最多停留 30 天，這趟 5 天沒問題</li>
+      <li><b>現金財力證明：</b>外交部提醒每人至少帶 <b>2 萬泰銖現金</b>（或等值外幣），信用卡不算；不一定會被抽查，但要備著</li>
+      <li><b>其他：</b>護照效期 6 個月以上、回程機票、飯店訂房紀錄（截圖存手機）</li>
+    </ul>
+  </div>
+  <div class="note imp"><b>🚫 2/21（日）萬佛節全國禁酒：</b>酒吧、餐廳、超商都不能賣酒，違者會被罰；少數獲准場所例外。2/22（一）補假，可以賣酒。</div>
   <div class="note imp"><b>護照效期需至少 6 個月。</b>旅遊平安險及旅遊不便險請自行投保。</div>
   <div class="note imp"><b>大麻精油按摩：</b>泰國 2025 年 6 月起大麻改回醫療用途、須有處方；THC 低於 0.2% 的 CBD 產品仍可合法使用，按摩選明確標示 CBD 精油的店家（行程選配：Loft Thai Spa，預約前先確認還有 CBD 療程）。<br><b>任何大麻或 CBD 產品都不要帶回台灣</b>，在台灣屬毒品管制，入境會觸法。</div>
   <div class="note tip"><b>寺廟服裝：</b>大皇宮、臥佛寺要遮肩、過膝，不穿拖鞋短褲；鄭王廟可租泰服拍照（自費）。</div>
   <div class="note tip"><b>天氣：</b>2 月是曼谷乾季，白天約 30°C 上下、早晚稍涼；帶防曬、帽子、薄外套（冷氣很強）。</div>
   <div class="note gold"><b>付款：</b>夜市、路邊攤、Thipsamai、臥佛寺門票只收現金；商場與飯店可刷卡。Grab 叫車最省事。</div>
+</section>
+
+<!-- ============ 緊急 ============ -->
+<section id="sos">
+  <h2>🆘 緊急聯絡</h2>
+  <div class="card">
+    <div class="kv">
+      <b>導遊</b><span>（請填姓名與電話）</span>
+      <b>飯店</b><span>Nysa Hotel <a href="tel:+6620796999">+66 2 079 6999</a>（以訂房確認信為準）</span>
+      <b>觀光警察</b><span><a href="tel:1155">1155</a>（24 小時，有外語服務）</span>
+      <b>報警／急救</b><span>報警 <a href="tel:191">191</a>・救護車 <a href="tel:1669">1669</a></span>
+      <b>駐泰代表處</b><span>急難救助 <a href="tel:+66816664006">+66 81-666-4006</a>（非急難勿撥）<br>上班時間 <a href="tel:+6621193555">+66 2-119-3555</a></span>
+      <b>外交部</b><span>旅外國人急難救助專線 0800-085-095</span>
+    </div>
+    <p class="small" style="margin-bottom:0">護照遺失：先報警拿報案證明，再聯絡駐泰代表處補發。護照首頁拍照存手機和雲端。</p>
+  </div>
 </section>
 
 <!-- ============ 美功火車 ============ -->
@@ -597,20 +626,20 @@ const DAYS=[
    ['下午','鄭王廟','可租泰服拍照（自費）','Wat Arun'],
    ['晚','夜遊湄南河・遊船自助餐','餐標 750，河景＋鄭王廟夜景','Chao Phraya River Cruise'],
    ['夜','🌙 夜市（選配）','<b>Asiatique 河岸夜市</b>：在河邊，摩天輪、夜景；或 <b>火車夜市 Srinakarin</b>（週四～日才開，今晚有，離市區較遠要搭 Grab）。<a href="night.html">看夜市分頁</a>','Asiatique The Riverfront'],
-   ['夜','酒吧或按摩（選配）','🍸 Pastel（Aira Hotel 22 樓，週一公休所以今晚去）或 <a href="bars.html">其他酒吧</a>；💆 Health Land Asok／Let\'s Relax（Terminal 21）營業到 23:00，遊船回來後要去建議先預約，Nana 站一帶也有很多按摩店']
-  ],meals:['早：飯店','午：泰式風味餐','晚：遊船自助餐']},
+   ['夜','💆 按摩（選配）','Health Land Asok／Let\'s Relax（Terminal 21）營業到 23:00，遊船回來後要去建議先預約，Nana 站一帶也有很多按摩店。🚫 今晚萬佛節禁酒，酒吧多半不營業，酒吧行程改到其他晚上']
+  ],meals:['早：飯店','午：泰式風味餐','晚：遊船自助餐'],note:'🙏 <b>今天是萬佛節（Makha Bucha）</b>：全泰國<b>禁止賣酒</b>，酒吧、餐廳、超商都不賣，遊船上可能也不能點酒；少數獲准的場所例外，以現場為準。<br>晚上很多寺廟有信眾手持蠟燭繞寺三圈的儀式（Wian Tian），想體驗可以去看看。'},
  {d:3,date:'2/22',wd:'一',title:'全天自由活動',c:'var(--d3)',stay:'Nysa Sukhumvit 11',
   items:[
    ['08:30','大皇宮＋玉佛寺','一開門就到；服裝遮肩過膝','Grand Palace Bangkok'],
    ['10:30','臥佛寺','步行 5～7 分；可在寺內按摩','Wat Pho'],
    ['12:00','Thipsamai 炒河粉','週一有開（週二休）；嘟嘟車約 60～100 泰銖','Thipsamai Pad Thai'],
-   ['下午','回飯店附近按摩','Health Land Asok／Let\'s Relax Terminal 21','Health Land Asok'],
+   ['下午','回飯店休息・泳池或按摩','走累了先回飯店；按摩可去 Health Land Asok／Let\'s Relax Terminal 21','Health Land Asok'],
    ['下午','🌿 大麻 CBD 精油按摩（選配）','Loft Thai Spa（Sukhumvit 24，BTS Phrom Phong 站旁）；60／90／120 分，約 2,400 泰銖起；官網資訊不一致，<b>先確認還有 CBD 療程再預約</b>','Loft Thai Spa Sukhumvit 24'],
    ['17:00','Above Eleven 看夕陽','或改河景餐廳，二選一；先訂位','Above Eleven Bangkok'],
-   ['晚','Terminal 21 美食街或 Soi 11','步行可到','Terminal 21 Asok'],
+   ['晚','晚餐：Terminal 21 美食街或 Soi 11','步行可到；吃完下面的選配挑一個就好，不用全部跑','Terminal 21 Asok'],
    ['晚','🌙 夜市（選配）','<b>考山路</b>：逛完老城區可直接過去，晚上 7 點後最熱鬧，酒吧、小吃、按摩一整條；或 <b>Jodd Fairs＋火車夜市 Ratchada</b>（MRT Thailand Cultural Centre，離飯店 3 站）。<a href="night.html">看夜市分頁</a>','Khao San Road Bangkok'],
    ['晚','🥊 泰拳比賽（選配）','Rajadamnern 泰拳場，每晚都有比賽；可接在看夕陽後，搭 Grab 前往','Rajadamnern Stadium']
-  ],meals:['早：飯店','午：自理','晚：自理'],note:'不派車、無導遊。交通：MRT 藍線 Sukhumvit → Sanam Chai 最方便。<br>🏛️ <b>選配：大城（Ayutthaya）一日遊</b>，可取代老城區行程，詳見下方「自由活動」。'},
+  ],meals:['早：飯店','午：自理','晚：自理'],note:'不派車、無導遊。交通：MRT 藍線 Sukhumvit → Sanam Chai 最方便。<br>📅 今天是萬佛節補假，銀行、公家機關休息，景點照常開放，人可能比較多；今天可以賣酒了。<br>🏛️ <b>選配：大城（Ayutthaya）一日遊</b>，可取代老城區行程，詳見下方「自由活動」。'},
  {d:4,date:'2/23',wd:'二',title:'天空步道・米其林觀光巴士',c:'var(--d4)',stay:'Nysa Sukhumvit 11',
   items:[
    ['上午','自由活動','A Safari World／B 泳池＋EmQuartier／C SPA（見「自由活動」）'],
@@ -634,6 +663,7 @@ const DAYS=[
    ['22:55','抵達高雄','台灣時間']
   ],meals:['早：飯店','午：自理','晚：機上']}
 ];
+const li=i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`;
 function renderDays(sel){
   const bar=document.getElementById('daybar');
   bar.innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
@@ -643,7 +673,8 @@ function renderDays(sel){
     <div class="dh"><h3>Day ${x.d}・${x.date}（${x.wd}）${x.title}</h3></div>
     <div class="meta"><span>🏨 ${x.stay}</span><span>🌡️ 約 24～33°C</span><span>🌇 日落約 18:30</span></div>
     ${x.note?`<div class="note tip" style="margin:4px 0 6px">${x.note}</div>`:''}
-    <ul class="tl">${x.items.map(i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`).join('')}</ul>
+    <ul class="tl">${x.items.filter(i=>!i[1].includes('選配')).map(li).join('')}</ul>
+    ${x.items.some(i=>i[1].includes('選配'))?`<div class="optbox"><div class="opth">➕ 選配（看體力挑，不用全跑）</div><ul class="tl">${x.items.filter(i=>i[1].includes('選配')).map(li).join('')}</ul></div>`:''}
     <div class="meals">${x.meals.map(m=>`<span>🍽️ ${m}</span>`).join('')}</div>
    </div>`).join('');
   document.querySelectorAll('.rt').forEach(g=>{g.style.opacity=(!sel||+g.dataset.d===sel)?1:.12});
@@ -719,7 +750,7 @@ function checklist(id,items,key){
   document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
   document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
 }
-checklist('checklist',['護照（效期 6 個月以上）','機票確認 CI839／CI840','旅平險＋旅遊不便險','泰銖現金（小鈔方便夜市、嘟嘟車）','信用卡','網卡／eSIM','安裝 Grab App','防曬、帽子、太陽眼鏡','薄外套（冷氣很強）','遮肩過膝衣物（寺廟用）','好走的鞋＋拖鞋','行動電源、轉接頭（泰國插座多相容台灣雙平腳）','個人藥品','預約：Above Eleven／Burapa／按摩'],'chk');
+checklist('checklist',['護照（效期 6 個月以上）','機票確認 CI839／CI840','旅平險＋旅遊不便險','泰銖現金（小鈔方便夜市、嘟嘟車）','信用卡','網卡／eSIM','安裝 Grab App','防曬、帽子、太陽眼鏡','薄外套（冷氣很強）','遮肩過膝衣物（寺廟用）','好走的鞋＋拖鞋','行動電源、轉接頭（泰國插座多相容台灣雙平腳）','個人藥品','預約：Above Eleven／Burapa／按摩','TDAC 入境卡（2/17 後填）','每人 2 萬泰銖現金（財力證明）','飯店訂房紀錄截圖','導遊電話存手機'],'chk');
 </script>
 </body>
 </html>
