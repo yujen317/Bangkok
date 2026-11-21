@@ -319,16 +319,30 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
         <tr><td><span class="tag">A 動物園</span></td><td>Safari World</td><td>Safari Park 週二～五 09:00～16:30（週一休）；現場票 1,000 泰銖，網路較便宜</td><td>東北郊約 40 公里，單程 1～1.5 小時；建議包車，08:00 前出發，只逛 Safari Park，約 12:00 離開</td></tr>
         <tr><td><span class="tag t">B 輕鬆</span></td><td>睡晚一點、飯店泳池，再逛 EmQuartier／Emporium</td><td>商場約 10:00 開門</td><td>BTS 2 站到 Phrom Phong，逛完直接往王權天空步道</td></tr>
         <tr><td><span class="tag o">C 按摩</span></td><td>Health Land 或 Let's Relax SPA；想試 CBD 精油可選 Loft Thai（Phrom Phong，先確認療程）</td><td>同上</td><td>前一天沒做到可以補</td></tr>
-        <tr><td><span class="tag">D 求財參拜</span></td><td><b>🐘 慧光象神</b> <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Huai+Khwang+Ganesha+Shrine" target="_blank" rel="noopener">📍地圖</a><br><b>🙏 四面佛</b> <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Erawan+Shrine+Bangkok" target="_blank" rel="noopener">📍地圖</a></td><td>都免費、隨喜捐款買供品；四面佛約 06:00～22:00（各來源寫到 22:00～24:00）</td><td>BTS Nana 2 站到 Chit Lom，走空橋約 5 分；拜完逛 CentralWorld／水門，再去王權天空步道</td></tr>
+        <tr><td><span class="tag">D 求財參拜<br>（擇一）</span></td><td><b>🐘 慧光象神</b> <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Huai+Khwang+Ganesha+Shrine" target="_blank" rel="noopener">📍地圖</a><br><b>🙏 四面佛</b> <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Erawan+Shrine+Bangkok" target="_blank" rel="noopener">📍地圖</a></td><td>都免費、隨喜捐款買供品；四面佛約 06:00～22:00（各來源寫到 22:00～24:00）</td><td>BTS Nana 2 站到 Chit Lom，走空橋約 5 分；拜完逛 CentralWorld／水門，再去王權天空步道</td></tr>
       </table>
       <p class="small">替代：ICONSIAM 或暹羅商圈（Siam Paragon、CentralWorld）。週二 Thipsamai 公休；洽圖洽週末市集沒開。</p>
-      <h3>🙏 D 求財參拜路線（09:30 出門，約到 12:30）</h3>
-      <ol style="padding-left:20px;margin-top:0">
-        <li><b>09:30 出門 → 約 09:50 慧光象神</b>：MRT Sukhumvit → Huai Khwang（4 站），對老鼠耳朵許願</li>
-        <li><b>約 10:45 四面佛</b>：MRT 回 Sukhumvit，轉 BTS Asok → Chit Lom（3 站），走空橋到四面佛</li>
-        <li><b>約 11:30 順路</b>：四面佛對面 CentralWorld 前還有愛神、象神，可以一起拜；Big C、水門也在附近</li>
-        <li><b>午餐後</b>：在 CentralWorld 或附近吃飯，再搭 BTS Chit Lom → Siam 轉深綠線 → Chong Nonsi，去王權天空步道</li>
-      </ol>
+      <h3>🙏 D 求財參拜（兩間擇一，09:30 出門）</h3>
+      <div class="grid2">
+        <div class="card" style="margin:0">
+          <b>🐘 選慧光象神</b>
+          <div class="small">求財、事業</div>
+          <ul style="padding-left:18px;margin:6px 0 0">
+            <li>09:30 出門，MRT Sukhumvit → Huai Khwang（4 站）</li>
+            <li>拜完在附近「新中國城」吃午餐</li>
+            <li>下午 MRT 到 Si Lom，轉走 BTS Sala Daeng → Chong Nonsi 去天空步道</li>
+          </ul>
+        </div>
+        <div class="card" style="margin:0">
+          <b>🙏 選四面佛</b>
+          <div class="small">平安、事業、財運、感情都可以求</div>
+          <ul style="padding-left:18px;margin:6px 0 0">
+            <li>09:30 出門，BTS Nana → Chit Lom（2 站），走空橋過去</li>
+            <li>對面 CentralWorld 前還有愛神、象神，想拜可以順便</li>
+            <li>在 CentralWorld 吃午餐，下午 BTS 到 Siam 轉深綠線 → Chong Nonsi</li>
+          </ul>
+        </div>
+      </div>
       <h3>🐘 慧光象神參拜方式</h3>
       <ul style="padding-left:18px;margin-top:0">
         <li><b>供品：</b>在神像旁的櫃台隨意捐款，領一串花、一根蠟燭、五支香</li>
@@ -600,7 +614,7 @@ const DAYS=[
  {d:4,date:'2/23',wd:'二',title:'天空步道・米其林觀光巴士',c:'var(--d4)',stay:'Nysa Sukhumvit 11',
   items:[
    ['上午','自由活動','A Safari World／B 泳池＋EmQuartier／C SPA（見「自由活動」）'],
-   ['上午','🐘🙏 求財參拜（選配）','09:30 出門 → 慧光象神（MRT Huai Khwang）→ 約 10:45 四面佛（BTS Chit Lom）→ 中午在 CentralWorld 一帶吃飯；路線見「自由活動」','Erawan Shrine Bangkok'],
+   ['上午','🐘／🙏 求財參拜（擇一，選配）','09:30 出門，<b>慧光象神</b>（MRT Huai Khwang）或 <b>四面佛</b>（BTS Chit Lom）挑一間就好，拜完慢慢吃午餐再去天空步道','Erawan Shrine Bangkok'],
    ['下午','王權天空步道 King Power Mahanakhon','玻璃地板高空觀景台','King Power Mahanakhon SkyWalk'],
    ['17:30','米其林觀光巴士','老城區繞一圈邊吃邊看；晚餐餐標 1,550'],
    ['夜','🌙 唐人街夜市・宵夜','觀光巴士後最順路：逛耀華力路、吃魚翅、T&K 海鮮；週二攤位有開（多攤週一休）','Yaowarat Road Chinatown Bangkok'],
