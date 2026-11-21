@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180">
+  <!-- shadow -->
+  <ellipse cx="104" cy="168" rx="70" ry="8" fill="#000" opacity=".12"/>
+  <!-- body -->
+  <path d="M56 92c0-30 26-50 58-50s56 22 56 54v58c0 6-4 10-10 10h-12c-6 0-10-4-10-10v-14h-30v14c0 6-4 10-10 10H86c-6 0-10-4-10-10v-30c-12-4-20-14-20-32z" fill="#b9c3d6"/>
+  <!-- saddle cloth -->
+  <path d="M96 62c20-10 50-10 66 4l-6 44c-18 8-42 8-58 0z" fill="#e05a7a"/>
+  <path d="M98 104c18 8 40 8 58 0" stroke="#f6c64f" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="112" cy="84" r="4" fill="#f6c64f"/><circle cx="128" cy="80" r="4" fill="#f6c64f"/><circle cx="144" cy="84" r="4" fill="#f6c64f"/>
+  <!-- head -->
+  <circle cx="64" cy="78" r="38" fill="#c9d2e3"/>
+  <!-- ear -->
+  <path d="M84 50c22-6 34 12 30 34-3 18-22 24-34 14z" fill="#aab5cb"/>
+  <path d="M88 60c12-2 18 8 16 20-2 10-12 12-18 6z" fill="#f4b7c6"/>
+  <!-- trunk -->
+  <path d="M34 92c-8 10-10 26-2 36 6 8 16 6 18-2 1-6-4-8-8-6-2-6 0-14 6-20z" fill="#c9d2e3"/>
+  <!-- eye & blush -->
+  <ellipse cx="56" cy="72" rx="5" ry="6.5" fill="#2b2420"/>
+  <circle cx="58" cy="70" r="1.8" fill="#fff"/>
+  <ellipse cx="48" cy="90" rx="7" ry="4.5" fill="#f4a6b8" opacity=".8"/>
+  <!-- headpiece -->
+  <path d="M50 40l14-26 14 26z" fill="#f6c64f"/>
+  <circle cx="64" cy="12" r="5" fill="#e05a7a"/>
+  <path d="M46 42c12-6 24-6 36 0" stroke="#e05a7a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- tail -->
+  <path d="M168 100c10 2 14 10 12 18" stroke="#9aa6bf" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- flower -->
+  <g transform="translate(22 128)">
+    <circle cx="0" cy="-6" r="5" fill="#fff"/><circle cx="6" cy="0" r="5" fill="#fff"/><circle cx="0" cy="6" r="5" fill="#fff"/><circle cx="-6" cy="0" r="5" fill="#fff"/><circle r="4" fill="#f6c64f"/>
+  </g>
+</svg>

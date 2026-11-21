@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+<g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".32">
+  <!-- elephant -->
+  <g transform="translate(18 22)">
+    <path d="M10 30c0-14 12-22 26-22s24 8 24 20v16h-8v-8h-8v8h-8v-8h-8v8h-8V36c-6 2-12 0-14-6" fill="#fff" fill-opacity=".18"/>
+    <path d="M10 30c-4 6-4 14 2 18"/>
+    <path d="M30 14c-6 2-8 10-2 14"/>
+    <circle cx="20" cy="22" r="1.6" fill="#fff"/>
+  </g>
+  <!-- tuk-tuk -->
+  <g transform="translate(140 18)">
+    <path d="M6 14h52l6 18v10H4V22z" fill="#fff" fill-opacity=".18"/>
+    <path d="M6 14l4-8h44l4 8"/>
+    <path d="M22 22h16v10H22z"/>
+    <circle cx="16" cy="44" r="6"/><circle cx="52" cy="44" r="6"/>
+  </g>
+  <!-- stupa -->
+  <g transform="translate(96 88)">
+    <path d="M24 0v10M18 18l6-8 6 8M14 30h20l-2-12H16zM8 52h32l-4-22H12zM4 58h40"/>
+    <path d="M12 52h24" />
+  </g>
+  <!-- mango -->
+  <g transform="translate(20 132)">
+    <path d="M6 20c0-12 10-18 22-16 14 2 22 16 14 28-8 10-26 10-32 0-3-4-4-8-4-12z" fill="#fff" fill-opacity=".18"/>
+    <path d="M26 4c2-6 8-8 12-6-2 5-6 7-12 6z"/>
+  </g>
+  <!-- lotus -->
+  <g transform="translate(160 120)">
+    <path d="M30 34c-6-8-6-20 0-28 6 8 6 20 0 28z"/>
+    <path d="M30 34c-12-2-20-12-20-22 10 2 18 10 20 22zM30 34c12-2 20-12 20-22-10 2-18 10-20 22z"/>
+    <path d="M8 36h44"/>
+  </g>
+  <!-- coconut -->
+  <g transform="translate(96 176)">
+    <circle cx="20" cy="26" r="16" fill="#fff" fill-opacity=".18"/>
+    <path d="M10 18h20M24 18l8-16 4 2"/>
+  </g>
+  <!-- stars & dots -->
+  <path d="M200 200l3 6 6 1-5 4 1 6-5-3-5 3 1-6-5-4 6-1z" fill="#fff" fill-opacity=".5"/>
+  <path d="M84 30l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z" fill="#fff" fill-opacity=".5"/>
+  <circle cx="226" cy="96" r="3" fill="#fff"/><circle cx="76" cy="122" r="2.5" fill="#fff"/><circle cx="160" cy="214" r="2.5" fill="#fff"/><circle cx="12" cy="220" r="2" fill="#fff"/>
+</g>
+</svg>
