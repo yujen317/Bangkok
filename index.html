@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🇹🇭 曼谷五天四夜旅遊手冊｜2027/2/20–2/24</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{background:linear-gradient(150deg,#0f6b6b 0%,#14504f 55%,#3a2d14 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,190,90,.45),transparent 70%)}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85">🇹🇭 สวัสดีกรุงเทพฯ ・ 10 人導遊接團</div>
+    <h1>曼谷五天四夜旅遊手冊</h1>
+    <div class="sub">2027/2/20（六）～ 2/24（三）｜高雄 ⇄ 曼谷</div>
+    <div class="count" id="countdown"></div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="jump">
+  <a href="#flight">✈️ 航班</a>
+  <a href="#hotel">🏨 住宿</a>
+  <a href="#days">📅 每日行程</a>
+  <a href="#map">🗺️ 路線圖</a>
+  <a href="#train">🚂 美功火車</a>
+  <a href="#free">🧭 自由活動</a>
+  <a href="#tools">🧰 工具</a>
+  <a href="#food">🍜 美食</a>
+  <a href="#bars">🍸 高空酒吧</a>
+  <a href="#river">🌅 河景餐廳</a>
+  <a href="#shop">🛍️ 購物</a>
+  <a href="#night">🌙 夜市</a>
+  <a href="#tips">⚠️ 提醒</a>
+</nav>
+
+<!-- ============ 航班 ============ -->
+<section id="flight">
+  <h2>✈️ 航班</h2>
+  <div class="card">
+    <div class="small" style="margin-bottom:6px"><span class="tag t">去程</span> 2/20（六）中華航空 <b>CI 839</b><button class="copy" data-copy="CI839">複製</button></div>
+    <div class="flight">
+      <div class="ap"><div class="code">KHH</div><div class="t">14:45</div><div class="c">高雄小港</div></div>
+      <div class="mid">約 3 小時 50 分<div class="line"></div>時差 −1 小時</div>
+      <div class="ap"><div class="code">BKK</div><div class="t">17:35</div><div class="c">蘇凡納布</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="small" style="margin-bottom:6px"><span class="tag o">回程</span> 2/24（三）中華航空 <b>CI 840</b><button class="copy" data-copy="CI840">複製</button></div>
+    <div class="flight">
+      <div class="ap"><div class="code">BKK</div><div class="t">18:35</div><div class="c">蘇凡納布</div></div>
+      <div class="mid">約 3 小時 20 分<div class="line"></div>時差 +1 小時</div>
+      <div class="ap"><div class="code">KHH</div><div class="t">22:55</div><div class="c">高雄小港</div></div>
+    </div>
+  </div>
+  <div class="note tip">🕐 航班時間皆為<b>當地時間</b>，泰國比台灣<b>慢 1 小時</b>。回程建議起飛前 3 小時、約 <b>15:30 前</b>抵達機場。</div>
+</section>
+
+<!-- ============ 住宿 ============ -->
+<section id="hotel">
+  <h2>🏨 住宿</h2>
+  <div class="card">
+    <div style="font-weight:700;font-size:1.05rem">Nysa Bangkok Sukhumvit 11 by Kingston Hotels</div>
+    <div class="small">連住 4 晚（2/20～2/23）・團體房價</div>
+    <div class="kv" style="margin-top:8px">
+      <b>地址</b><span>73/7-8 Sukhumvit Soi 13, Klongtoey-Nua, Wattana, Bangkok 10110 <button class="copy" data-copy="73/7-8 Sukhumvit 13, Klongtoey-Nua, Wattana, Bangkok 10110">複製</button></span>
+      <b>入住／退房</b><span>15:00 後入住・12:00 前退房</span>
+      <b>設施</b><span>戶外泳池、健身房、館內餐廳 Kwann</span>
+      <b>最近捷運</b><span>BTS Nana 步行約 10 分・MRT Sukhumvit 約 15 分</span>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=Nysa+Hotel+Bangkok+Sukhumvit+11" target="_blank" rel="noopener">📍 Google 地圖</a>
+      <button class="btn sm ghost" onclick="showTaxi()">🚕 給司機看</button>
+    </div>
+    <div id="taxiCard" style="display:none;margin-top:10px;background:#111;color:#fff;border-radius:12px;padding:16px;text-align:center">
+      <div style="font-size:1.35rem;font-weight:700;line-height:1.5">โรงแรม ไนซ่า กรุงเทพ<br>สุขุมวิท ซอย 13</div>
+      <div style="font-size:.9rem;opacity:.8;margin-top:6px">Nysa Hotel Bangkok, Sukhumvit Soi 13<br>（近 BTS Nana 站）</div>
+    </div>
+  </div>
+  <details>
+    <summary>📍 飯店周邊生活圈</summary>
+    <div class="in">
+      <p class="small" style="margin-top:0">飯店在 Soi 13 小巷內，巷內安靜，走出巷口就是曼谷最熱鬧的觀光區之一，吃、逛、按摩都方便。</p>
+      <ul style="padding-left:18px;margin:0">
+        <li><b>捷運：</b>BTS Nana 站步行約 10 分（最近）；MRT Sukhumvit 約 15 分（可轉 BTS Asok）</li>
+        <li><b>Soi 11 酒吧餐廳街：</b>步行幾分鐘，Above Eleven、Havana Social 等</li>
+        <li><b>Nana 站一帶：</b>按摩店、路邊攤、便利商店密集</li>
+        <li><b>韓國城：</b>大馬路對面 Sukhumvit Plaza 一帶</li>
+        <li><b>Terminal 21：</b>步行約 14 分，頂樓 Pier 21 美食街便宜好吃</li>
+      </ul>
+      <div class="note imp" style="margin-bottom:0">Nana Plaza（Soi 4）與 Soi Cowboy 為成人娛樂區，晚上較喧鬧，有長輩同行可先提醒。</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ 每日行程 ============ -->
+<section id="days">
+  <h2>📅 每日行程</h2>
+  <div class="daybar" id="daybar"></div>
+  <div id="dayList"></div>
+  <div class="note gold">💰 團費 14,800＋導遊小費 300×4 = <b>NT$16,000</b>／人。自理：國際機票、Day 1 與 Day 3～5 午餐、鄭王廟泰服租借、Day 3 全天與 Day 4 上午交通、旅平險與不便險。</div>
+</section>
+
+<!-- ============ 路線圖 ============ -->
+<section id="map">
+  <h2>🗺️ 路線示意圖</h2>
+  <div class="card mapwrap">
+    <svg viewBox="0 0 720 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'PingFang TC','Noto Sans TC',sans-serif">
+      <path d="M330 20 C360 90 300 140 345 200 C390 260 320 320 360 400 L365 470" fill="none" stroke="#a9bfd0" stroke-width="12" stroke-linecap="round" opacity=".7"/>
+      <text x="372" y="40" font-size="21" fill="#6b8597">湄南河</text>
+      <!-- Day1 -->
+      <g class="rt" data-d="1"><path d="M520 85 L475 300" stroke="var(--d1)" stroke-width="3.5" fill="none"/><path d="M475 300 L610 245" stroke="var(--d1)" stroke-width="3.5" fill="none"/></g>
+      <!-- Day2 -->
+      <g class="rt" data-d="2"><path d="M520 85 L140 255 L175 345 L270 110 L520 85" stroke="var(--d2)" stroke-width="3.5" fill="none"/></g>
+      <!-- Day4 -->
+      <g class="rt" data-d="4"><path d="M520 85 L430 205" stroke="var(--d4)" stroke-width="3.5" fill="none"/><path d="M430 205 L300 185" stroke="var(--d4)" stroke-width="3.5" fill="none" stroke-dasharray="6 5"/></g>
+      <!-- Day5 -->
+      <g class="rt" data-d="5"><path d="M520 85 L560 160 L610 245" stroke="var(--d5)" stroke-width="3" fill="none" stroke-dasharray="7 6"/></g>
+      <!-- points -->
+      <g font-size="21" fill="#2b2420">
+        <circle cx="520" cy="85" r="10" fill="#2b2420"/><text x="538" y="80" font-weight="700">Nysa 飯店</text><text x="538" y="104" font-size="16" fill="#7a6d63">Sukhumvit Soi 13</text>
+        <circle cx="475" cy="300" r="7" fill="#c9bfb3"/><text x="440" y="325">邦納夜市</text>
+        <circle cx="610" cy="245" r="7" fill="#c9bfb3"/><text x="560" y="275">蘇凡納布機場</text>
+        <circle cx="140" cy="255" r="7" fill="#c9bfb3"/><text x="20" y="245">丹能沙朵</text><text x="20" y="270">水上市場</text>
+        <circle cx="175" cy="345" r="7" fill="#c9bfb3"/><text x="90" y="378">美功鐵道市場</text>
+        <circle cx="270" cy="110" r="7" fill="#c9bfb3"/><text x="215" y="100">鄭王廟</text>
+        <circle cx="430" cy="205" r="7" fill="#c9bfb3"/><text x="440" y="200">王權天空步道</text>
+        <circle cx="300" cy="185" r="6" fill="#c9bfb3"/><text x="200" y="215" font-size="18">老城區（觀光巴士）</text>
+        <circle cx="560" cy="160" r="6" fill="#c9bfb3"/><text x="572" y="156">崧越路逛街</text>
+      </g>
+      <text x="20" y="455" font-size="16" fill="#7a6d63">示意圖，非實際比例；Day 3 全天自由活動</text>
+    </svg>
+    <div class="legend">
+      <span><i style="background:var(--d1)"></i>Day 1 抵達</span>
+      <span><i style="background:var(--d2)"></i>Day 2 郊區＋河岸</span>
+      <span><i style="background:var(--d4)"></i>Day 4 天空步道＋觀光巴士</span>
+      <span><i style="background:var(--d5)"></i>Day 5 返台</span>
+    </div>
+  </div>
+  <details>
+    <summary>🚌 Day 4 米其林觀光巴士路線（17:30 起）</summary>
+    <div class="in">
+      <p class="small" style="margin-top:0">老城區繞一圈、邊吃邊看；停靠點以當天路線為準。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.9rem">
+        <span class="tag t">上下車</span>→<span class="tag">唐人街</span>→<span class="tag">龍蓮寺</span>→<span class="tag">大鞦韆・蘇泰寺</span>→<span class="tag">大皇宮</span>→<span class="tag">臥佛寺</span>→<span class="tag">鄭王廟（隔河遠眺）</span>→<span class="tag t">回到起點</span>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ 美功火車 ============ -->
+<section id="train">
+  <h2>🚂 美功鐵道市場火車時刻</h2>
+  <div class="card">
+    <p class="small" style="margin-top:0">火車每天進出市場各 4 班，共 8 次經過；市場約 06:00～18:00。</p>
+    <div class="train">
+      <div><div class="small">進站（抵達）</div></div><div><div class="small">出站（離開）</div></div>
+      <div><div class="big">08:30</div></div><div><div class="big">06:20</div></div>
+      <div class="hl"><div class="big">11:10</div><div style="font-size:.72rem">⭐ Day 2 目標</div></div><div><div class="big">09:00</div></div>
+      <div><div class="big">14:30</div><div class="small">備案</div></div><div class="hl"><div class="big">11:30</div><div style="font-size:.72rem">⭐ 連看兩次</div></div>
+      <div><div class="big">17:40</div><div class="small">末班</div></div><div><div class="big">15:30</div></div>
+    </div>
+    <div class="note tip" style="margin-bottom:0">先去水上市場，到美功最有機會看到 <b>11:10 進站、11:30 出站</b>，間隔約 20 分可連看兩次收攤開攤；趕不上就看 <b>14:30 進站</b>。提早 15～20 分到鐵軌旁卡位，火車過很快、人很多。</div>
+  </div>
+</section>
+
+<!-- ============ 自由活動 ============ -->
+<section id="free">
+  <h2>🧭 自由活動建議</h2>
+  <details open>
+    <summary>Day 3・2/22（一）全天</summary>
+    <div class="in tbl">
+      <table>
+        <tr><th>時段</th><th>建議</th><th>門票／營業</th><th>說明</th></tr>
+        <tr><td>上午</td><td><b>大皇宮</b></td><td>500 泰銖（含玉佛寺）；08:30～16:30，15:30 停止售票</td><td>一開門就到；10 點後人多；服裝要遮肩過膝；皇室典禮時可能臨時關閉</td></tr>
+        <tr><td>上午</td><td><b>臥佛寺</b></td><td>300 泰銖（含一瓶水），只收現金；08:00～18:30</td><td>大皇宮南門步行 5～7 分；寺內泰式按摩 30 分約 260、60 分約 420 泰銖</td></tr>
+        <tr><td>中午</td><td><b>Thipsamai 炒河粉</b></td><td>週三～週一 09:00～24:00，週二休；只收現金</td><td>老城區，週一有開</td></tr>
+        <tr><td>下午</td><td><b>回飯店附近按摩</b></td><td>Health Land Asok 09:00～23:00；Let's Relax（Terminal 21 六樓）10:00～23:00</td><td>熱門建議先預約</td></tr>
+        <tr><td>傍晚</td><td><b>Above Eleven 看夕陽</b></td><td>每天 17:00～02:00</td><td>先訂位、注意服裝；或改去河景餐廳（二選一）</td></tr>
+        <tr><td>晚上</td><td>Terminal 21 美食街或 Soi 11</td><td>10:00～22:00</td><td>步行可到</td></tr>
+      </table>
+    </div>
+  </details>
+  <details>
+    <summary>Day 4・2/23（二）上午（中午前回市區）</summary>
+    <div class="in tbl">
+      <table>
+        <tr><th>選項</th><th>建議</th><th>門票／營業</th><th>說明</th></tr>
+        <tr><td><span class="tag">A 動物園</span></td><td>Safari World</td><td>Safari Park 週二～五 09:00～16:30（週一休）；現場票 1,000 泰銖，網路較便宜</td><td>東北郊約 40 公里，單程 1～1.5 小時；建議包車，08:00 前出發，只逛 Safari Park，約 12:00 離開</td></tr>
+        <tr><td><span class="tag t">B 輕鬆</span></td><td>睡晚一點、飯店泳池，再逛 EmQuartier／Emporium</td><td>商場約 10:00 開門</td><td>BTS 2 站到 Phrom Phong，逛完直接往王權天空步道</td></tr>
+        <tr><td><span class="tag o">C 按摩</span></td><td>Health Land 或 Let's Relax SPA</td><td>同上</td><td>前一天沒做到可以補</td></tr>
+      </table>
+      <p class="small">替代：ICONSIAM 或暹羅商圈（Siam Paragon、CentralWorld）。週二 Thipsamai 公休；洽圖洽週末市集沒開。</p>
+    </div>
+  </details>
+  <details>
+    <summary>🛺 想搭嘟嘟車？這樣搭</summary>
+    <div class="in">
+      <p class="small" style="margin-top:0">嘟嘟車適合老城區內短程，不適合從飯店直接坐到老城區（遠、塞、吸廢氣、比計程車貴）。</p>
+      <div class="tbl"><table>
+        <tr><th>路段</th><th>建議交通</th><th>參考</th></tr>
+        <tr><td>飯店 → 老城區</td><td>MRT 藍線 Sukhumvit → Sanam Chai（近臥佛寺），或 Grab</td><td>免殺價、有冷氣</td></tr>
+        <tr><td>大皇宮 → 臥佛寺</td><td>步行</td><td>約 5～7 分</td></tr>
+        <tr><td>臥佛寺 → Thipsamai</td><td><b>嘟嘟車</b></td><td>約 2 公里，60～100 泰銖</td></tr>
+        <tr><td>Thipsamai → 金山寺／大鞦韆</td><td><b>嘟嘟車</b></td><td>60～100 泰銖</td></tr>
+        <tr><td>老城區 → 飯店</td><td>MRT 藍線（Sam Yot）或 Grab</td><td>回飯店按摩</td></tr>
+      </table></div>
+      <ul style="padding-left:18px;margin-bottom:0">
+        <li><b>先講好價錢再上車</b>：先開 Grab 看同路線價格當殺價基準</li>
+        <li><b>App 免殺價</b>：Grab 選 GrabTukTuk，或 MuvMi 電動嘟嘟車（固定價，06:30～22:00）</li>
+        <li>一台通常坐 2～3 人</li>
+        <li><b>防詐騙</b>：說「大皇宮今天關門」或推銷 20 泰銖繞一圈的，多半帶去珠寶店、西裝店，直接拒絕</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- ============ 工具 ============ -->
+<section id="tools">
+  <h2>🧰 旅途工具</h2>
+
+  <div class="card conv">
+    <h3 style="margin-top:0">💱 泰銖換算</h3>
+    <div class="row">
+      <input id="thb" type="number" inputmode="decimal" placeholder="泰銖 THB">
+      <span style="flex:0 0 auto">⇄</span>
+      <input id="twd" type="number" inputmode="decimal" placeholder="台幣 TWD">
+    </div>
+    <div class="out" id="convOut">—</div>
+    <div class="row small" style="margin-top:4px">
+      <span style="flex:0 0 auto">匯率 1 THB =</span>
+      <input id="rate" type="number" step="0.001" inputmode="decimal" style="max-width:100px">
+      <span style="flex:0 0 auto">TWD</span>
+    </div>
+    <div class="quick" id="quickThb"></div>
+    <p class="small" style="margin-bottom:0">預設值為參考值，出發前請依換匯銀行現鈔賣出匯率修改（會記住你的設定）。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🧾 共同記帳・分帳</h3>
+    <div class="small" style="margin-bottom:8px">成員（逗號分隔，會記住）</div>
+    <input id="members" placeholder="例如：Karen, 小美, 阿明…">
+    <div class="grid2" style="margin-top:8px">
+      <input id="lgItem" placeholder="項目（例：按摩、Grab）">
+      <input id="lgAmt" type="number" inputmode="decimal" placeholder="金額（泰銖）">
+      <select id="lgPayer"></select>
+      <select id="lgSplit"><option value="all">全員平分</option></select>
+    </div>
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <button class="btn" onclick="addLedger()">＋ 新增</button>
+      <button class="btn ghost" onclick="clearLedger()">清空</button>
+    </div>
+    <div class="ledger-list" id="ledgerList"></div>
+    <div id="ledgerSum" class="small" style="margin-top:8px"></div>
+    <div class="bal" id="balance"></div>
+    <p class="small" style="margin-bottom:0">資料只存在這支手機的瀏覽器，換手機或清除瀏覽資料會不見。</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">🗣️ 泰語小幫手 <span class="small">（點 🔊 播放／📋 複製）</span></h3>
+    <div id="phrases"></div>
+    <div class="note tip" style="margin-bottom:0">女生句尾加 <b>ka（ค่ะ）</b>、男生加 <b>krap（ครับ）</b> 比較禮貌。點餐說 <b>mai phet</b>（不要辣）或 <b>phet nit noi</b>（小辣）。</div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">✅ 出發前檢查清單</h3>
+    <ul class="check" id="checklist" style="padding:0;margin:0"></ul>
+  </div>
+</section>
+
+<!-- ============ 美食 ============ -->
+<section id="food">
+  <h2>🍜 曼谷美食</h2>
+  <details open>
+    <summary>依區域分（順路吃）</summary>
+    <div class="in tbl">
+      <table>
+        <tr><th>區域</th><th>店名</th><th>招牌</th><th>備註</th></tr>
+        <tr><td>老城區</td><td><b>Jay Fai（痣姐熱炒）</b></td><td>蟹肉煎蛋卷、醉炒海鮮麵</td><td>米其林一星路邊攤；週三～六 09:00～19:30，只收現金、不能訂位，蛋卷約 1,500 泰銖；行程中只有 Day 5（三）上午碰得到</td></tr>
+        <tr><td>老城區</td><td><b>Thipsamai</b></td><td>蛋皮包炒河粉、鮮榨柳橙汁</td><td>週二公休，只收現金</td></tr>
+        <tr><td>唐人街</td><td><b>T&amp;K Seafood</b></td><td>炭烤大蝦、海鮮熱炒</td><td>綠色制服露天海鮮攤，適合 Day 4 觀光巴士後</td></tr>
+        <tr><td>唐人街</td><td><b>Nai Ek Roll Noodles</b></td><td>胡椒豬肉粿條捲</td><td>老字號，晚上續攤適合</td></tr>
+        <tr><td>唐人街</td><td><b>Nai Mong Hoi Thod</b></td><td>酥脆蚵仔煎</td><td>米其林必比登</td></tr>
+        <tr><td>唐人街</td><td><b>Lim Lao Ngow</b></td><td>手打魚丸麵</td><td>米其林必比登</td></tr>
+        <tr><td>水門市場</td><td><b>Go-Ang 水門海南雞飯</b></td><td>海南雞飯</td><td>粉紅制服，連年必比登</td></tr>
+        <tr><td>水門市場</td><td><b>Kuang Heng 海南雞飯</b></td><td>海南雞飯</td><td>就在 Go-Ang 隔壁，可比較</td></tr>
+        <tr><td>暹羅</td><td><b>Jeh O Chula</b></td><td>冬蔭功泡麵</td><td>常大排長龍</td></tr>
+        <tr><td>暹羅</td><td><b>Somtam Nua</b></td><td>青木瓜沙拉、炸雞、Larb</td><td>暹羅廣場，10:45～21:30</td></tr>
+        <tr><td>暹羅</td><td><b>Inter Restaurant</b></td><td>炒河粉、冬蔭功、烤鴨沙拉</td><td>老字號平價泰菜館</td></tr>
+        <tr><td>暹羅</td><td><b>Paragon Food Hall</b></td><td>必比登與名店集中</td><td>有冷氣，約 80～200 泰銖</td></tr>
+        <tr><td>勝利紀念碑</td><td><b>船麵巷</b></td><td>船麵</td><td>一小碗 20～30 泰銖，約 11:00～21:00</td></tr>
+        <tr><td>Lumphini</td><td><b>Polo Fried Chicken</b></td><td>蒜酥炸雞、糯米飯</td><td>MRT Lumphini</td></tr>
+        <tr><td>Sukhumvit</td><td><b>Wattana Panich</b></td><td>老湯燉牛肉麵</td><td>Ekkamai，搭 BTS 約 4 站</td></tr>
+        <tr><td>Sukhumvit</td><td><b>Rung Rueang 豬肉粿條</b></td><td>豬肉粿條</td><td>必比登，Soi 26 近 Phrom Phong</td></tr>
+        <tr><td>飯店旁</td><td><b>Burapa（by Sri Trat）</b></td><td>泰東部家傳菜</td><td>必比登，Soi 11 步行 3 分；<b>一定要訂位</b></td></tr>
+        <tr><td>飯店內</td><td><b>Kwann</b></td><td>炭火煙燻現代泰菜</td><td>Nysa 招牌餐廳</td></tr>
+        <tr><td>飯店旁</td><td><b>Terminal 21 Pier 21</b></td><td>各式泰國小吃</td><td>一道約 50 泰銖起，10:00～22:00</td></tr>
+        <tr><td>Central Embassy</td><td><b>Eathai</b></td><td>各地泰式小吃</td><td>地下樓，BTS Ploen Chit</td></tr>
+      </table>
+      <p class="small">店家營業時間與必比登名單每年變動，出發前再確認。</p>
+    </div>
+  </details>
+  <details>
+    <summary>🥭 必吃泰國小吃清單（可勾選）</summary>
+    <div class="in"><ul class="check" id="eatlist" style="padding:0;margin:0"></ul></div>
+  </details>
+</section>
+
+<!-- ============ 高空酒吧 ============ -->
+<section id="bars">
+  <h2>🍸 飯店附近高空酒吧（每晚一家）</h2>
+  <div class="tbl card" style="padding:6px 8px">
+    <table>
+      <tr><th>晚上</th><th>酒吧</th><th>特色</th><th>營業／注意</th></tr>
+      <tr><td>Day 1（六）</td><td><b>Rainforest Rooftop</b><br><span class="small">Mövenpick Sukhumvit 15</span></td><td>輕鬆隨性、有 Happy Hour</td><td>無服裝規定</td></tr>
+      <tr><td>Day 2（日）</td><td><b>Pastel</b><br><span class="small">Aira Hotel 22 樓</span></td><td>地中海料理＋DJ</td><td>價位偏高，週一公休</td></tr>
+      <tr><td>Day 3（一）</td><td><b>Above Eleven</b><br><span class="small">Fraser Suites 頂樓</span></td><td>最有名、秘魯日式料理、全景夜景</td><td>17:00～02:00；看夕陽一開門就到；先訂位，勿穿拖鞋短褲</td></tr>
+      <tr><td>Day 4（二）</td><td><b>Japanish Rooftop</b><br><span class="small">Ramada 19 樓</span></td><td>日式裝潢、生魚片海鮮飯</td><td>營業到凌晨 4 點</td></tr>
+    </table>
+    <p class="small" style="padding:0 6px">願意搭車：Thong Lo 的 <b>Octave</b>（Marriott Sukhumvit 57）360 度景觀，車程 15～20 分，可替換任一晚。</p>
+  </div>
+</section>
+
+<!-- ============ 河景 ============ -->
+<section id="river">
+  <h2>🌅 河景餐廳</h2>
+  <div class="note gold">最順路是 Day 3 逛完大皇宮、臥佛寺後的傍晚，日落約 18:30 前後鄭王廟亮燈最美，和 Above Eleven 看夕陽二選一。熱門座位先訂。</div>
+  <div class="card">
+    <h3 style="margin-top:0">老城區・正對鄭王廟（Tha Tien 碼頭）</h3>
+    <div class="tbl"><table>
+      <tr><th>餐廳</th><th>特色</th></tr>
+      <tr><td><b>Supanniga Eating Room</b>（Tha Tien）</td><td>家傳泰菜，二樓陽台正對鄭王廟；<span class="tag r">週一公休</span>（Day 3 剛好週一）</td></tr>
+      <tr><td><b>Sala Rattanakosin</b></td><td>河畔浪漫餐廳，頂樓酒吧景觀很好</td></tr>
+      <tr><td><b>Eat Sight Story（ESS Deck）</b></td><td>河邊露台，近距離看鄭王廟</td></tr>
+      <tr><td><b>Chom Arun</b></td><td>時髦陽台座位</td></tr>
+      <tr><td><b>View ARUN</b></td><td>鄭王廟全景，泰式料理</td></tr>
+      <tr><td><b>Above Riva</b></td><td>Riva Arun 頂樓，俯瞰河岸與鄭王廟</td></tr>
+    </table></div>
+    <h3>下游飯店區（BTS Saphan Taksin）</h3>
+    <div class="tbl"><table>
+      <tr><th>餐廳</th><th>特色</th></tr>
+      <tr><td><b>Thara Thong</b>（Royal Orchid Sheraton）</td><td>泰式料理，18:00～22:30</td></tr>
+      <tr><td><b>River Barge</b>（Chatrium Riverside）</td><td>河畔露台，週末有自助餐</td></tr>
+      <tr><td><b>Chao Phraya Terrace</b>（Four Seasons）</td><td>泰式炭烤，傍晚看夕陽喝調酒</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<!-- ============ 購物 ============ -->
+<section id="shop">
+  <h2>🛍️ 購物商場與超市</h2>
+  <p class="small" style="margin-top:-6px">BTS 站數以飯店最近的 Nana 站起算。</p>
+  <details open>
+    <summary>購物商場</summary>
+    <div class="in tbl"><table>
+      <tr><th>商場</th><th>特色</th><th>交通</th></tr>
+      <tr><td><b>Terminal 21</b></td><td>每層一個城市主題；Pier 21 美食街</td><td>步行 14 分／BTS 1 站 Asok</td></tr>
+      <tr><td><b>EmQuartier／Emporium</b></td><td>精品設計品牌，空中花園</td><td>BTS 2 站 Phrom Phong</td></tr>
+      <tr><td><b>Siam Paragon</b></td><td>大百貨、Gourmet Market、海洋館</td><td>BTS 3 站 Siam</td></tr>
+      <tr><td><b>Siam Center／Discovery</b></td><td>泰國設計師品牌、文創</td><td>同 Siam 站</td></tr>
+      <tr><td><b>CentralWorld</b></td><td>超大型購物中心</td><td>BTS 2 站 Chit Lom</td></tr>
+      <tr><td><b>Central Embassy</b></td><td>高端精品，人少好逛</td><td>BTS 1 站 Ploen Chit</td></tr>
+      <tr><td><b>Platinum Fashion Mall</b></td><td>平價服飾批發，可議價</td><td>Chit Lom 步行 10 分</td></tr>
+      <tr><td><b>MBK Center</b></td><td>平價百貨、紀念品，可殺價</td><td>BTS 4 站 National Stadium</td></tr>
+      <tr><td><b>ICONSIAM</b></td><td>河岸豪華商場、室內水上市場</td><td>BTS＋金線約 40～50 分</td></tr>
+    </table></div>
+  </details>
+  <details>
+    <summary>超市・伴手禮・退稅</summary>
+    <div class="in">
+      <div class="tbl"><table>
+        <tr><th>超市</th><th>特色</th><th>交通</th></tr>
+        <tr><td><b>Big C</b>（Ratchadamri）</td><td>伴手禮最齊、便宜</td><td>BTS Chit Lom，CentralWorld 對面</td></tr>
+        <tr><td><b>Gourmet Market</b></td><td>高檔、包裝適合送禮，部分可退稅</td><td>Paragon、EmQuartier、Emporium</td></tr>
+        <tr><td><b>Tops</b></td><td>中價位連鎖，晚上採買方便</td><td>Central 系列百貨內</td></tr>
+        <tr><td><b>Lotus's</b></td><td>本地量販店，價格親民</td><td>出發前查最近分店</td></tr>
+        <tr><td><b>7-Eleven／FamilyMart</b></td><td>零食、泰奶、藥膏</td><td>飯店周邊</td></tr>
+      </table></div>
+      <p><b>🎁 熱門伴手禮：</b>芒果乾、小老闆海苔、泰奶茶包、手標泰式茶、各式藥膏與香氛精油。</p>
+      <div class="note gold" style="margin-bottom:0"><b>退稅：</b>同一店家同日消費滿 2,000 泰銖可申請，記得帶護照；門檻與規定以出發前公告為準。</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ 夜市 ============ -->
+<section id="night">
+  <h2>🌙 曼谷夜市</h2>
+  <div class="tbl card" style="padding:6px 8px">
+    <table>
+      <tr><th>夜市</th><th>特色</th><th>位置</th><th>時間</th><th>適合</th></tr>
+      <tr><td><b>Save One Go</b>（Bangna）</td><td>在地超大夜市，小吃 5～10 泰銖起</td><td>邦納，BTS 黃線 Sri Iam</td><td>16:00～23:00</td><td><span class="tag t">Day 1 已排</span></td></tr>
+      <tr><td><b>Jodd Fairs Ratchada</b></td><td>最熱門觀光夜市；火山排骨、烤海鮮</td><td>Big C Place Ratchada 旁，MRT 可到</td><td>17:00～24:00</td><td>任一晚</td></tr>
+      <tr><td><b>Train Night Market Ratchada</b></td><td>較安靜，古著區、酒吧區</td><td>Esplanade Ratchada 後方</td><td>17:00～01:00</td><td>可和 Jodd Fairs 同晚</td></tr>
+      <tr><td><b>Talad Rot Fai Srinakarin</b></td><td>元祖火車夜市，古董老車</td><td>Seacon Square 後方，較遠</td><td>週四～日 17:00～01:00</td><td>只有 Day 1、2 碰得到</td></tr>
+      <tr><td><b>Asiatique</b></td><td>河岸夜市、摩天輪</td><td>BTS Saphan Taksin 轉船</td><td>17:00～24:00</td><td>任一晚</td></tr>
+      <tr><td><b>唐人街（耀華力路）</b></td><td>海鮮、粿條捲、魚丸麵、甜點</td><td>MRT Wat Mangkon</td><td>17:00～24:00；<span class="tag r">多攤週一休</span></td><td>Day 4 巴士後</td></tr>
+      <tr><td><b>水門夜市</b></td><td>平價服飾、小吃</td><td>近 CentralWorld、Platinum</td><td>傍晚到深夜</td><td>逛完 Platinum 順路</td></tr>
+    </table>
+    <p class="small" style="padding:0 6px">夜市多半只收現金，帶小額泰銖；營業時間常有異動。</p>
+  </div>
+</section>
+
+<!-- ============ 提醒 ============ -->
+<section id="tips">
+  <h2>⚠️ 重要提醒</h2>
+  <div class="note imp"><b>護照效期需至少 6 個月。</b>旅遊平安險及旅遊不便險請自行投保。</div>
+  <div class="note imp"><b>大麻精油按摩：</b>泰國 2025 年 6 月起大麻改回醫療用途、須有處方；THC 低於 0.2% 的 CBD 產品仍可合法使用，按摩選明確標示 CBD 精油的店家。<br><b>任何大麻或 CBD 產品都不要帶回台灣</b>，在台灣屬毒品管制，入境會觸法。</div>
+  <div class="note tip"><b>寺廟服裝：</b>大皇宮、臥佛寺要遮肩、過膝，不穿拖鞋短褲；鄭王廟可租泰服拍照（自費）。</div>
+  <div class="note tip"><b>天氣：</b>2 月是曼谷乾季，白天約 30°C 上下、早晚稍涼；帶防曬、帽子、薄外套（冷氣很強）。</div>
+  <div class="note gold"><b>付款：</b>夜市、路邊攤、Thipsamai、臥佛寺門票只收現金；商場與飯店可刷卡。Grab 叫車最省事。</div>
+</section>
+
+<footer>
+  曼谷五天四夜・2027/2/20–2/24・Nysa Bangkok Sukhumvit 11<br>
+  店家與景點營業時間以出發前官方公告為準
+</footer>
+</div>
+
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+
+<script>
+/* ---------- safe storage ---------- */
+const store={get(k,d){try{const v=localStorage.getItem('bkk27_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+set(k,v){try{localStorage.setItem('bkk27_'+k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- countdown ---------- */
+const DEP=new Date('2027-02-20T14:45:00+08:00'), RET=new Date('2027-02-24T23:55:00+08:00');
+function tick(){
+  const el=document.getElementById('countdown'), now=new Date(), ms=DEP-now;
+  if(ms>0){
+    const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4),s=Math.floor(ms%6e4/1e3);
+    el.innerHTML=[[d,'天'],[h,'時'],[m,'分'],[s,'秒']].map(([n,l])=>`<div class="box"><div class="n">${String(n).padStart(2,'0')}</div><div class="l">${l}</div></div>`).join('')+'<div class="msg">距離 CI839 起飛</div>';
+  }else if(now<RET){el.innerHTML='<div class="msg">🌴 旅行進行中！玩得開心 ขอให้สนุกนะ</div>'}
+  else{el.innerHTML='<div class="msg">🏠 平安回家囉，下次見曼谷！</div>'}
+}
+tick();setInterval(tick,1000);
+
+/* ---------- copy ---------- */
+function copyText(t,btn){
+  const done=()=>{if(!btn)return;const o=btn.textContent;btn.textContent='已複製';btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1200)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>fallback())}else fallback();
+  function fallback(){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();done()}
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copyText(b.dataset.copy,b)});
+function showTaxi(){const c=document.getElementById('taxiCard');c.style.display=c.style.display==='none'?'block':'none'}
+
+/* ---------- days ---------- */
+const MQ=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const DAYS=[
+ {d:1,date:'2/20',wd:'六',title:'抵達曼谷・邦納夜市',c:'var(--d1)',stay:'Nysa Sukhumvit 11',
+  items:[
+   ['14:45','高雄小港起飛','CI 839（台灣時間）'],
+   ['17:35','抵達蘇凡納布機場','當地時間；通關後約 19:00 出關，與導遊會合','Suvarnabhumi Airport'],
+   ['19:30','Night Market Bangna（邦納夜市）','離機場不遠，順路吃晚餐；晚餐：樂來順火山排骨（餐標 400）','Save One Go Bangna'],
+   ['21:00','入住 Nysa 飯店','機場到飯店約 32 公里、40 分鐘，尖峰可能 1 小時以上','Nysa Hotel Bangkok Sukhumvit 11'],
+   ['夜','Rainforest Rooftop（選配）','Mövenpick Sukhumvit 15，輕鬆、無服裝規定','Rainforest Rooftop Movenpick Sukhumvit 15']
+  ],meals:['早：—','午：自理','晚：火山排骨']},
+ {d:2,date:'2/21',wd:'日',title:'水上市場・鐵道市場・鄭王廟',c:'var(--d2)',stay:'Nysa Sukhumvit 11',
+  items:[
+   ['早','飯店早餐後出發','最長的一天，郊區單程車程約 1.5～2 小時'],
+   ['上午','丹能沙朵水上市場','含搭船＋每人一份椰子冰淇淋','Damnoen Saduak Floating Market'],
+   ['11:10','美功鐵道市場','看 11:10 進站、11:30 出站；提早 15～20 分卡位','Maeklong Railway Market'],
+   ['午','泰式風味餐','餐標 350'],
+   ['下午','鄭王廟','可租泰服拍照（自費）','Wat Arun'],
+   ['晚','夜遊湄南河・遊船自助餐','餐標 750，河景＋鄭王廟夜景','Chao Phraya River Cruise'],
+   ['夜','Pastel（選配）','Aira Hotel 22 樓，週一公休所以今晚去','Pastel Rooftop Aira Hotel Bangkok']
+  ],meals:['早：飯店','午：泰式風味餐','晚：遊船自助餐']},
+ {d:3,date:'2/22',wd:'一',title:'全天自由活動',c:'var(--d3)',stay:'Nysa Sukhumvit 11',
+  items:[
+   ['08:30','大皇宮＋玉佛寺','一開門就到；服裝遮肩過膝','Grand Palace Bangkok'],
+   ['10:30','臥佛寺','步行 5～7 分；可在寺內按摩','Wat Pho'],
+   ['12:00','Thipsamai 炒河粉','週一有開（週二休）；嘟嘟車約 60～100 泰銖','Thipsamai Pad Thai'],
+   ['下午','回飯店附近按摩','Health Land Asok／Let\'s Relax Terminal 21','Health Land Asok'],
+   ['17:00','Above Eleven 看夕陽','或改河景餐廳，二選一；先訂位','Above Eleven Bangkok'],
+   ['晚','Terminal 21 美食街或 Soi 11','步行可到','Terminal 21 Asok']
+  ],meals:['早：飯店','午：自理','晚：自理'],note:'不派車、無導遊。交通：MRT 藍線 Sukhumvit → Sanam Chai 最方便。'},
+ {d:4,date:'2/23',wd:'二',title:'天空步道・米其林觀光巴士',c:'var(--d4)',stay:'Nysa Sukhumvit 11',
+  items:[
+   ['上午','自由活動','A Safari World／B 泳池＋EmQuartier／C SPA（見「自由活動」）'],
+   ['下午','王權天空步道 King Power Mahanakhon','玻璃地板高空觀景台','King Power Mahanakhon SkyWalk'],
+   ['17:30','米其林觀光巴士','老城區繞一圈邊吃邊看；晚餐餐標 1,550'],
+   ['夜','唐人街宵夜','吃完還可以逛耀華力路、吃魚翅、T&K 海鮮','Yaowarat Road Chinatown Bangkok'],
+   ['深夜','Japanish Rooftop（選配）','Ramada 19 樓，營業到凌晨 4 點','Japanish Rooftop Ramada Bangkok']
+  ],meals:['早：飯店','午：自理','晚：米其林觀光巴士']},
+ {d:5,date:'2/24',wd:'三',title:'崧越路逛街・返台',c:'var(--d5)',stay:'溫暖的家 🏠',
+  items:[
+   ['上午','（選配）Jay Fai 痣姐熱炒','只有今天（週三）碰得到，09:00 開、排隊很久','Raan Jay Fai'],
+   ['中午','退房・崧越路逛街','12:00 前退房；Terminal 21、EmQuartier 補貨','Terminal 21 Asok'],
+   ['14:30','前往機場','飯店到機場約 40 分～1 小時'],
+   ['15:30','抵達蘇凡納布機場','國際線建議起飛前 3 小時','Suvarnabhumi Airport'],
+   ['18:35','曼谷起飛','CI 840'],
+   ['22:55','抵達高雄','台灣時間']
+  ],meals:['早：飯店','午：自理','晚：機上']}
+];
+function renderDays(sel){
+  const bar=document.getElementById('daybar');
+  bar.innerHTML=`<button data-d="0" class="${sel===0?'on':''}">全部<small>5 天</small></button>`+
+    DAYS.map(x=>`<button data-d="${x.d}" class="${sel===x.d?'on':''}">D${x.d} ${x.date}<small>週${x.wd}</small></button>`).join('');
+  document.getElementById('dayList').innerHTML=DAYS.filter(x=>!sel||x.d===sel).map(x=>`
+   <div class="card day" style="--dc:${x.c}">
+    <div class="dh"><h3>Day ${x.d}・${x.date}（${x.wd}）${x.title}</h3></div>
+    <div class="meta"><span>🏨 ${x.stay}</span><span>🌡️ 約 24～33°C</span><span>🌇 日落約 18:30</span></div>
+    ${x.note?`<div class="note tip" style="margin:4px 0 6px">${x.note}</div>`:''}
+    <ul class="tl">${x.items.map(i=>`<li><div class="tm">${i[0]}</div><div><div class="ti">${i[1]}${i[3]?`<a class="pin" href="${MQ(i[3])}" target="_blank" rel="noopener">📍地圖</a>`:''}</div><div class="ds">${i[2]||''}</div></div></li>`).join('')}</ul>
+    <div class="meals">${x.meals.map(m=>`<span>🍽️ ${m}</span>`).join('')}</div>
+   </div>`).join('');
+  document.querySelectorAll('.rt').forEach(g=>{g.style.opacity=(!sel||+g.dataset.d===sel)?1:.12});
+  store.set('day',sel);
+}
+document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b)renderDays(+b.dataset.d)});
+(function(){const now=new Date();let def=store.get('day',0);
+  DAYS.forEach(x=>{const [mm,dd]=x.date.split('/');const dt=new Date(`2027-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}T00:00:00+07:00`);if(now>=dt&&now-dt<864e5)def=x.d});
+  renderDays(def)})();
+
+/* ---------- currency ---------- */
+const rateEl=document.getElementById('rate'),thb=document.getElementById('thb'),twd=document.getElementById('twd'),out=document.getElementById('convOut');
+rateEl.value=store.get('rate',1.03);
+function conv(from){const r=parseFloat(rateEl.value)||0;
+  if(from==='thb'){const v=parseFloat(thb.value);twd.value=isNaN(v)?'':Math.round(v*r);}
+  else{const v=parseFloat(twd.value);thb.value=isNaN(v)||!r?'':Math.round(v/r);}
+  out.textContent=thb.value?`฿${(+thb.value).toLocaleString()} ≈ NT$${(+twd.value).toLocaleString()}`:'—'}
+thb.oninput=()=>conv('thb');twd.oninput=()=>conv('twd');rateEl.oninput=()=>{store.set('rate',parseFloat(rateEl.value)||1.03);conv('thb')};
+document.getElementById('quickThb').innerHTML=[20,100,300,500,1000,2000].map(v=>`<button data-v="${v}">฿${v}</button>`).join('');
+document.getElementById('quickThb').onclick=e=>{const b=e.target.closest('button');if(b){thb.value=b.dataset.v;conv('thb')}};
+
+/* ---------- ledger ---------- */
+const mEl=document.getElementById('members');
+mEl.value=store.get('members','');
+let ledger=store.get('ledger',[]);
+function members(){return mEl.value.split(/[,，、]/).map(s=>s.trim()).filter(Boolean)}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fillSel(){const ms=members();
+  document.getElementById('lgPayer').innerHTML=ms.length?ms.map(m=>`<option>${esc(m)}</option>`).join(''):'<option value="">先輸入成員</option>';
+  document.getElementById('lgSplit').innerHTML='<option value="all">全員平分</option>'+ms.map(m=>`<option value="${esc(m)}">只算 ${esc(m)}</option>`).join('')}
+function renderLedger(){
+  const ms=members();
+  document.getElementById('ledgerList').innerHTML=ledger.map((x,i)=>`<div class="it"><span>${esc(x.item)}<br><span class="small">${esc(x.payer)} 付・${x.split==='all'?'全員平分':'只算 '+esc(x.split)}</span></span><span>฿${x.amt.toLocaleString()} <button class="x" data-i="${i}">✕</button></span></div>`).join('')||'<div class="small">還沒有記錄</div>';
+  const total=ledger.reduce((s,x)=>s+x.amt,0),r=parseFloat(rateEl.value)||1.03;
+  document.getElementById('ledgerSum').textContent=ledger.length?`總計 ฿${total.toLocaleString()}（≈ NT$${Math.round(total*r).toLocaleString()}）`:'';
+  const bal={};ms.forEach(m=>bal[m]=0);
+  ledger.forEach(x=>{if(bal[x.payer]===undefined)bal[x.payer]=0;bal[x.payer]+=x.amt;
+    const who=x.split==='all'?ms:[x.split];if(!who.length)return;const each=x.amt/who.length;who.forEach(w=>{if(bal[w]===undefined)bal[w]=0;bal[w]-=each})});
+  document.getElementById('balance').innerHTML=ledger.length?Object.entries(bal).map(([k,v])=>`<div>${esc(k)}<br><span class="${v>=0?'pos':'neg'}">${v>=0?'應收':'應付'} ฿${Math.abs(Math.round(v)).toLocaleString()}</span></div>`).join(''):'';
+}
+document.getElementById('ledgerList').onclick=e=>{const b=e.target.closest('.x');if(b){ledger.splice(+b.dataset.i,1);store.set('ledger',ledger);renderLedger()}};
+mEl.oninput=()=>{store.set('members',mEl.value);fillSel();renderLedger()};
+function addLedger(){const item=document.getElementById('lgItem').value.trim()||'未命名',amt=parseFloat(document.getElementById('lgAmt').value),payer=document.getElementById('lgPayer').value,split=document.getElementById('lgSplit').value;
+  if(!payer){alert('請先輸入成員');return}if(!(amt>0)){alert('請輸入金額');return}
+  ledger.push({item,amt,payer,split});store.set('ledger',ledger);document.getElementById('lgItem').value='';document.getElementById('lgAmt').value='';renderLedger()}
+function clearLedger(){if(confirm('確定清空所有記帳？')){ledger=[];store.set('ledger',ledger);renderLedger()}}
+fillSel();renderLedger();
+
+/* ---------- phrases ---------- */
+const PH=[
+ ['你好','สวัสดีค่ะ','sa-wat-dee ka'],
+ ['謝謝','ขอบคุณค่ะ','khop-khun ka'],
+ ['多少錢？','เท่าไหร่คะ','tao-rai ka'],
+ ['可以算便宜一點嗎？','ลดหน่อยได้ไหมคะ','lot noi dai mai ka'],
+ ['不要辣','ไม่เผ็ด','mai phet'],
+ ['小辣','เผ็ดนิดหน่อย','phet nit noi'],
+ ['不要香菜','ไม่ใส่ผักชี','mai sai phak-chee'],
+ ['買單','เช็คบิลค่ะ','check bin ka'],
+ ['好吃！','อร่อยมาก','a-roi mak'],
+ ['廁所在哪裡？','ห้องน้ำอยู่ที่ไหนคะ','hong-nam yu tee-nai ka'],
+ ['請去這個地址','ไปที่นี่ค่ะ','pai tee-nee ka'],
+ ['請用跳表','เปิดมิเตอร์ด้วยค่ะ','poet meter duay ka'],
+ ['不用了，謝謝','ไม่เป็นไรค่ะ','mai pen rai ka'],
+ ['可以刷卡嗎？','จ่ายบัตรได้ไหมคะ','jai bat dai mai ka']
+];
+const canSpeak='speechSynthesis' in window;
+function say(t){if(!canSpeak)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='th-TH';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+document.getElementById('phrases').innerHTML=PH.map((p,i)=>`<div class="phr"><div><div class="zh">${p[0]}</div><div class="th">${p[1]}</div><div class="rd">${p[2]}</div></div><div style="white-space:nowrap">${canSpeak?`<button class="copy" onclick="say(PH[${i}][1])">🔊</button>`:''}<button class="copy" data-copy="${p[1]}">📋</button></div></div>`).join('');
+
+/* ---------- checklists ---------- */
+function checklist(id,items,key){
+  const st=store.get(key,{});
+  document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
+  document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
+}
+checklist('checklist',['護照（效期 6 個月以上）','機票確認 CI839／CI840','旅平險＋旅遊不便險','泰銖現金（小鈔方便夜市、嘟嘟車）','信用卡','網卡／eSIM','安裝 Grab App','防曬、帽子、太陽眼鏡','薄外套（冷氣很強）','遮肩過膝衣物（寺廟用）','好走的鞋＋拖鞋','行動電源、轉接頭（泰國插座多相容台灣雙平腳）','個人藥品','預約：Above Eleven／Burapa／按摩'],'chk');
+checklist('eatlist',['🥭 芒果糯米飯（2～4 月正是芒果季）','🍜 泰式炒河粉 Pad Thai','🦐 冬蔭功 Tom Yum Goong','🥗 青木瓜沙拉 Som Tam','🍳 打拋豬飯 Pad Kra Pao','🥣 船麵 Kuay Teow Reua','🍖 火山排骨 Leng Saeb','🍢 烤豬肉串 Moo Ping','🍌 香蕉煎餅 Roti','🧋 泰式奶茶 Cha Yen','🥥 椰子冰淇淋（Day 2 水上市場含一份）','🔥 泰式燒烤 Moo Kra Ta'],'eat');
+</script>
+</body>
+</html>
