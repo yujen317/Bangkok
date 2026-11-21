@@ -128,7 +128,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 .optbox{background:#faf5ec;border:1px dashed var(--line);border-radius:12px;padding:4px 12px;margin-top:8px}
 .opth{font-size:.85rem;font-weight:700;color:var(--orchid);padding-top:6px}
 .mp{text-decoration:none;font-size:.8rem;white-space:nowrap;margin-left:2px;font-weight:600}
-.mems{display:flex;flex-wrap:wrap;gap:8px}.mem{background:var(--gold-soft);color:#7a4a10;border-radius:999px;padding:5px 14px;font-weight:600;font-size:.95rem}.mem small{margin-left:3px;font-size:.75rem;color:var(--red);font-weight:700}
+.mems{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:.95rem}.mem{background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:999px;padding:3px 11px;font-weight:600;font-size:.88rem}.mem small{margin-left:3px;font-size:.72rem;font-weight:700;opacity:.9}
 </style>
 </head>
 <body>
@@ -138,13 +138,13 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
     <div style="font-size:.85rem;opacity:.85">🇹🇭 สวัสดีกรุงเทพฯ ・ 10 人導遊接團</div>
     <h1>曼谷五天四夜旅遊手冊</h1>
     <div class="sub">2027/2/20（六）～ 2/24（三）｜高雄 ⇄ 曼谷</div>
+    <div class="mems">👥 <span class="mem">臻</span><span class="mem">橋本</span><span class="mem">老王<small>×3</small></span><span class="mem">勳</span><span class="mem">慈耘</span><span class="mem">儒旻</span><span class="mem">力芳<small>×2</small></span><span class="mem">郁嘉</span></div>
     <div class="count" id="countdown"></div>
   </div>
 </header>
 
 <div class="wrap">
 <nav class="jump">
-  <a href="#crew">👥 成員</a>
   <a href="#flight">✈️ 航班</a>
   <a href="#hotel">🏨 住宿</a>
   <a href="#days">📅 每日行程</a>
@@ -161,15 +161,6 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
   <a href="#sos">🆘 緊急</a>
   <a href="#train">🚂 美功火車</a>
 </nav>
-
-<!-- ============ 成員 ============ -->
-<section id="crew">
-  <h2>👥 成員</h2>
-  <div class="card">
-    <div class="mems"><span class="mem">臻</span><span class="mem">橋本</span><span class="mem">老王<small>×3</small></span><span class="mem">勳</span><span class="mem">慈耘</span><span class="mem">儒旻</span><span class="mem">力芳<small>×2</small></span><span class="mem">郁嘉</span></div>
-    <p class="small" style="margin:8px 0 0">×3、×2 為同行人數（老王三人、力芳兩人）</p>
-  </div>
-</section>
 
 <!-- ============ 航班 ============ -->
 <section id="flight">
