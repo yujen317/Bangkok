@@ -280,9 +280,25 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
     <summary>🚌 Day 4 米其林觀光巴士路線（17:30 起）</summary>
     <div class="in">
       <p class="small" style="margin-top:0">老城區繞一圈、邊吃邊看；停靠點以當天路線為準。</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.9rem">
-        <span class="tag t">上下車</span>→<span class="tag">唐人街</span>→<span class="tag">龍蓮寺</span>→<span class="tag">大鞦韆・蘇泰寺</span>→<span class="tag">大皇宮</span>→<span class="tag">臥佛寺</span>→<span class="tag">鄭王廟（隔河遠眺）</span>→<span class="tag t">回到起點</span>
-      </div>
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block" font-family="-apple-system,'PingFang TC','Noto Sans TC',sans-serif">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1e9e6a"/></marker></defs>
+        <rect x="70" y="70" width="580" height="160" rx="80" fill="#1e9e6a" fill-opacity=".06" stroke="#1e9e6a" stroke-width="7"/>
+        <path d="M300 70 L330 70" stroke="#1e9e6a" stroke-width="7" marker-end="url(#ar)"/>
+        <path d="M420 230 L390 230" stroke="#1e9e6a" stroke-width="7" marker-end="url(#ar)"/>
+        <text x="360" y="148" text-anchor="middle" font-size="22" fill="#1e9e6a" font-weight="700">🚌 米其林觀光巴士</text>
+        <text x="360" y="176" text-anchor="middle" font-size="16" fill="#7a6d63">約 1.5 小時・邊吃邊看・順時針繞一圈</text>
+        <g font-size="18" fill="#2b2420" style="paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round">
+          <circle cx="70" cy="150" r="14" fill="#0f6b6b" stroke="#fff" stroke-width="3"/><text x="70" y="156" text-anchor="middle" font-size="14" fill="#fff" style="stroke:none">上</text>
+          <text x="52" y="196" text-anchor="middle" font-weight="700" fill="#0f6b6b">上下車</text><text x="52" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">17:30 上車</text><text x="52" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">19:00 下車</text>
+          <circle cx="170" cy="70" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="170" y="40" text-anchor="middle">🏮 唐人街</text><text x="170" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">約 17:40</text>
+          <circle cx="280" cy="70" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="280" y="40" text-anchor="middle">🛕 龍蓮寺</text><text x="280" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">約 17:50</text>
+          <circle cx="470" cy="70" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="470" y="40" text-anchor="middle">⛩️ 大鞦韆・蘇泰寺</text><text x="470" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">約 18:05</text>
+          <circle cx="650" cy="150" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="664" y="118" text-anchor="end">👑 大皇宮</text><text x="630" y="156" text-anchor="end" font-size="15" font-weight="700" fill="#c0392b">約 18:20</text>
+          <circle cx="520" cy="230" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="520" y="272" text-anchor="middle">🙏 臥佛寺</text><text x="520" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">約 18:35</text>
+          <circle cx="250" cy="230" r="11" fill="#fff" stroke="#1e9e6a" stroke-width="4"/><text x="250" y="272" text-anchor="middle">🌅 鄭王廟（隔河遠眺）</text><text x="250" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">約 18:45</text>
+        </g>
+      </svg>
+      <p class="small" style="margin:6px 0 0">⏱️ 時間為估算：晚餐場次約 17:30～19:00，各站是車上經過時間，實際以當天路線與路況為準；約 18:20 經過大皇宮剛好是日落時分。<br>巴士結束後想逛唐人街，搭 Grab 或 MRT 到 Wat Mangkon 站就到耀華力路；上下車地點以導遊通知為準。</p>
     </div>
   </details>
 </section>
@@ -657,8 +673,8 @@ const DAYS=[
    ['上午','自由活動','A Safari World／B 泳池＋EmQuartier／C SPA（見「自由活動」）'],
    ['上午','🐘／🙏 求財參拜（擇一，選配）','09:30 出門，<b>慧光象神</b>（MRT Huai Khwang）或 <b>四面佛</b>（BTS Chit Lom）挑一間就好，拜完慢慢吃午餐再去天空步道。<br>想兩間都去：09:30 出門 → 約 09:50 慧光象神 → 約 10:45 四面佛 → 11:30 CentralWorld 午餐（路線見「自由活動」）','Erawan Shrine Bangkok'],
    ['下午','王權天空步道 King Power Mahanakhon','玻璃地板高空觀景台','King Power Mahanakhon SkyWalk'],
-   ['17:30','米其林觀光巴士','老城區繞一圈邊吃邊看；晚餐餐標 1,550'],
-   ['夜','🌙 唐人街夜市・宵夜','觀光巴士後最順路：逛耀華力路、吃魚翅、T&K 海鮮；週二攤位有開（多攤週一休）','Yaowarat Road Chinatown Bangkok'],
+   ['17:30','米其林觀光巴士','老城區繞一圈邊吃邊看，約 1.5 小時、19:00 左右下車；晚餐餐標 1,550；路線圖見「路線圖」下方'],
+   ['19:00','🌙 唐人街夜市・宵夜','觀光巴士後最順路：逛耀華力路、吃魚翅、T&K 海鮮；週二攤位有開（多攤週一休）','Yaowarat Road Chinatown Bangkok'],
    ['深夜','酒吧或按摩（選配）','🍸 Japanish Rooftop（Ramada 19 樓，營業到凌晨 4 點）或 <a href="bars.html">其他酒吧</a>；💆 Health Land／Let\'s Relax 營業到 23:00，唐人街回來太晚的話可找營業到深夜的店（如 Asia Herb Association，時間以官網為準），Nana 站一帶也有很多按摩店']
   ],meals:['早：飯店','午：自理','晚：米其林觀光巴士']},
  {d:5,date:'2/24',wd:'三',title:'崧越路逛街・返台',c:'var(--d5)',stay:'溫暖的家 🏠',
