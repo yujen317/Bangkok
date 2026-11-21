@@ -226,35 +226,41 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
   <h2>🗺️ 路線示意圖</h2>
   <div class="card mapwrap">
     <svg viewBox="0 0 720 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'PingFang TC','Noto Sans TC',sans-serif">
-      <path d="M330 20 C360 90 300 140 345 200 C390 260 320 320 360 400 L365 470" fill="none" stroke="#a9bfd0" stroke-width="12" stroke-linecap="round" opacity=".7"/>
-      <text x="372" y="40" font-size="21" fill="#6b8597">湄南河</text>
-      <!-- Day1 -->
-      <g class="rt" data-d="1"><path d="M520 85 L475 300" stroke="var(--d1)" stroke-width="3.5" fill="none"/><path d="M475 300 L610 245" stroke="var(--d1)" stroke-width="3.5" fill="none"/></g>
-      <!-- Day2 -->
-      <g class="rt" data-d="2"><path d="M520 85 L140 255 L175 345 L270 110 L520 85" stroke="var(--d2)" stroke-width="3.5" fill="none"/></g>
-      <!-- Day4 -->
-      <g class="rt" data-d="4"><path d="M520 85 L430 205" stroke="var(--d4)" stroke-width="3.5" fill="none"/><path d="M430 205 L300 185" stroke="var(--d4)" stroke-width="3.5" fill="none" stroke-dasharray="6 5"/></g>
-      <!-- Day5 -->
-      <g class="rt" data-d="5"><path d="M520 85 L560 160 L610 245" stroke="var(--d5)" stroke-width="3" fill="none" stroke-dasharray="7 6"/></g>
-      <!-- points -->
-      <g font-size="21" fill="#2b2420">
-        <circle cx="520" cy="85" r="10" fill="#2b2420"/><text x="538" y="80" font-weight="700">Nysa 飯店</text><text x="538" y="104" font-size="16" fill="#7a6d63">Sukhumvit Soi 13</text>
-        <circle cx="475" cy="300" r="7" fill="#c9bfb3"/><text x="440" y="325">邦納夜市</text>
-        <circle cx="610" cy="245" r="7" fill="#c9bfb3"/><text x="560" y="275">蘇凡納布機場</text>
-        <circle cx="140" cy="255" r="7" fill="#c9bfb3"/><text x="20" y="245">丹能沙朵</text><text x="20" y="270">水上市場</text>
-        <circle cx="175" cy="345" r="7" fill="#c9bfb3"/><text x="90" y="378">美功鐵道市場</text>
-        <circle cx="270" cy="110" r="7" fill="#c9bfb3"/><text x="215" y="100">鄭王廟</text>
-        <circle cx="430" cy="205" r="7" fill="#c9bfb3"/><text x="440" y="200">王權天空步道</text>
-        <circle cx="300" cy="185" r="6" fill="#c9bfb3"/><text x="200" y="215" font-size="18">老城區（觀光巴士）</text>
-        <circle cx="560" cy="160" r="6" fill="#c9bfb3"/><text x="572" y="156">崧越路逛街</text>
+      <defs><symbol id="st" viewBox="-12 -12 24 24"><path d="M0-11 3.2-3.6 11-3.4 4.8 1.6 7 9.4 0 4.8-7 9.4-4.8 1.6-11-3.4-3.2-3.6z" fill="#e8b04a" stroke="#a8741a" stroke-width="1.4"/></symbol></defs>
+      <path d="M345 0 C330 60 345 100 335 140 C325 190 362 220 352 270 C342 320 362 380 352 470" fill="none" stroke="#a9bfd0" stroke-width="14" stroke-linecap="round" opacity=".6"/>
+      <text x="300" y="455" font-size="16" fill="#6b8597">湄南河</text>
+      <g class="rt" data-d="1" stroke="var(--d1)" stroke-width="3.5" fill="none"><path d="M650 270 L560 330 L540 95"/></g>
+      <g class="rt" data-d="2" stroke="var(--d2)" stroke-width="3.5" fill="none"><path d="M540 95 L90 250 L130 350 L300 125 L540 95"/></g>
+      <g class="rt" data-d="3" stroke="var(--d3)" stroke-width="3.5" fill="none"><path d="M540 95 L365 100 L372 140 L400 70 L540 95"/></g>
+      <g class="rt" data-d="4" stroke="var(--d4)" stroke-width="3.5" fill="none"><path d="M540 95 L480 215"/><path d="M480 215 L420 185 L372 140 L365 100 L420 185" stroke-dasharray="6 5"/></g>
+      <g class="rt" data-d="5" stroke="var(--d5)" stroke-width="3" fill="none" stroke-dasharray="7 6"><path d="M540 95 L590 150 L650 270"/></g>
+      <g font-size="19" fill="#2b2420" style="paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round">
+        <circle cx="540" cy="95" r="11" fill="#2b2420"/><text x="556" y="92" font-weight="700" font-size="21">Nysa 飯店</text><text x="556" y="113" font-size="15" fill="#7a6d63">Sukhumvit Soi 13</text>
+        <circle cx="560" cy="330" r="7" fill="#c9bfb3"/><text x="572" y="352">邦納夜市</text>
+        <circle cx="650" cy="270" r="7" fill="#c9bfb3"/><text x="598" y="300">蘇凡納布機場</text>
+        <circle cx="590" cy="150" r="6" fill="#c9bfb3"/><text x="602" y="157">崧越路逛街</text>
+        <circle cx="90" cy="250" r="7" fill="#c9bfb3"/><text x="14" y="228">丹能沙朵</text><text x="14" y="282">水上市場</text>
+        <circle cx="130" cy="350" r="7" fill="#c9bfb3"/><text x="70" y="380">美功鐵道市場</text>
+        <circle cx="480" cy="215" r="7" fill="#c9bfb3"/><text x="492" y="222">王權天空步道</text>
+        <use href="#st" x="353" y="88" width="24" height="24"/><text x="304" y="78" font-weight="700">大皇宮</text>
+        <use href="#st" x="360" y="128" width="24" height="24"/><text x="388" y="158" font-weight="700">臥佛寺</text>
+        <use href="#st" x="288" y="113" width="24" height="24"/><text x="226" y="131" font-weight="700">鄭王廟</text>
+        <use href="#st" x="388" y="58" width="24" height="24"/><text x="414" y="66">金山寺</text>
+        <use href="#st" x="408" y="173" width="24" height="24"/><text x="398" y="214">唐人街</text>
+        <use href="#st" x="446" y="136" width="24" height="24"/><text x="440" y="180">暹羅</text>
+        <use href="#st" x="508" y="18" width="24" height="24"/><text x="536" y="38">Jodd Fairs 夜市</text>
+        <use href="#st" x="298" y="248" width="24" height="24"/><text x="188" y="266">ICONSIAM</text>
+        <use href="#st" x="373" y="318" width="24" height="24"/><text x="398" y="312">Asiatique 夜市</text>
       </g>
-      <text x="20" y="455" font-size="16" fill="#7a6d63">示意圖，非實際比例；Day 3 全天自由活動</text>
+      <text x="14" y="455" font-size="15" fill="#7a6d63">示意圖，非實際比例</text>
     </svg>
     <div class="legend">
       <span><i style="background:var(--d1)"></i>Day 1 抵達</span>
       <span><i style="background:var(--d2)"></i>Day 2 郊區＋河岸</span>
+      <span><i style="background:var(--d3)"></i>Day 3 自由行・老城區建議</span>
       <span><i style="background:var(--d4)"></i>Day 4 天空步道＋觀光巴士</span>
       <span><i style="background:var(--d5)"></i>Day 5 返台</span>
+      <span>⭐ 重要景點</span>
     </div>
   </div>
   <details>
