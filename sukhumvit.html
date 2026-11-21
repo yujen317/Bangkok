@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>素坤逸散策｜曼谷手冊</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{--tmpl:1;background:url("assets/temples.svg") center bottom/auto 62% repeat-x,url("assets/pattern.svg") 0 0/200px repeat,linear-gradient(135deg,#d94a4a 0%,#e8763f 55%,#e8b04a 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden;text-shadow:0 1px 3px rgba(120,40,20,.35)}
+header.hero::after{content:"";position:absolute;right:max(8px,calc(50% - 370px));bottom:6px;width:96px;height:86px;background:url("assets/elephant.svg") center/contain no-repeat;pointer-events:none}
+@media(max-width:599px){header.hero{background-size:auto 40%,200px,auto}}
+@media(min-width:600px){header.hero::after{width:170px;height:153px;bottom:8px}}
+.hero h1,.hero .sub,.hero .count{position:relative;z-index:1}
+.count .box{background:rgba(255,255,255,.28)!important;border-color:rgba(255,255,255,.55)!important}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+.mp{text-decoration:none;font-size:.8rem;white-space:nowrap;margin-left:2px;font-weight:600}
+.fchips{display:flex;flex-wrap:wrap;gap:6px}.fchips button{border:1px solid var(--cc);background:#fff;color:var(--cc);border-radius:999px;padding:4px 10px;font-size:.82rem;cursor:pointer;opacity:.55}.fchips button.on{background:var(--cc);color:#fff;opacity:1}
+.fpin span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);font-size:15px}
+.farea{margin:0 0 10px}.farea>b{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}.fit{display:block;text-decoration:none;color:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:4px;background:#fff}.fit small{display:block;color:var(--muted);font-size:.75rem}
+.line{display:flex;align-items:flex-start;overflow-x:auto;padding:6px 2px 4px;gap:0}
+.st{flex:0 0 auto;text-align:center;width:92px;position:relative}
+.st:before{content:"";position:absolute;top:13px;left:-46px;width:92px;height:4px;background:#1f9d55}
+.st:first-child:before{display:none}
+.st .dot{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;background:#fff;border:4px solid #1f9d55;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
+.st.hot .dot{background:#1f9d55;color:#fff}
+.st b{display:block;font-size:.85rem}.st small{display:block;font-size:.72rem;color:var(--muted);line-height:1.3}
+.must{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0 10px}
+.must a{text-decoration:none;color:#fff;border-radius:12px;padding:10px 4px;text-align:center;font-weight:700;font-size:.95rem}
+.must a span{display:block;font-size:1.4rem}
+.spot{border-left:5px solid var(--sc);padding-left:10px;margin:0 0 12px}
+.spot h4{margin:0 0 2px;font-size:1rem}.spot p{margin:2px 0;font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85"><a href="./" style="color:#fff;text-decoration:none">← 回行程手冊</a></div>
+    <h1>素坤逸散策</h1>
+    <div class="sub">嵩越路 Sukhumvit：必走・必逛・必買・必吃</div>
+  </div>
+</header>
+<div class="wrap">
+<nav class="jump">
+  <a href="./">🏠 行程手冊</a>
+  <a href="#walk">👟 必走</a>
+  <a href="#shop">🛍️ 必逛</a>
+  <a href="#buy">🎁 必買</a>
+  <a href="#eat">🍜 必吃</a>
+  <a href="food.html">🗺️ 美食地圖</a>
+  <a href="bars.html">🍸 酒吧</a>
+</nav>
+<section>
+  <div class="must">
+    <a href="#walk" style="background:#1f9d55"><span>👟</span>必走</a>
+    <a href="#shop" style="background:#7b4fa0"><span>🛍️</span>必逛</a>
+    <a href="#buy" style="background:#c0392b"><span>🎁</span>必買</a>
+    <a href="#eat" style="background:#e8763f"><span>🍜</span>必吃</a>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">🚝 BTS 綠線一路往東逛</h3>
+    <div class="line"><div class="st hot"><div class="dot">1</div><b>Nana</b><small>飯店・Soi 11</small></div><div class="st hot"><div class="dot">2</div><b>Asok</b><small>Terminal 21・Soi Cowboy・森林公園</small></div><div class="st hot"><div class="dot">3</div><b>Phrom Phong</b><small>EmQuartier・Emporium</small></div><div class="st "><div class="dot">4</div><b>Thong Lo</b><small>芒果糯米飯・KINKIN</small></div><div class="st "><div class="dot">5</div><b>Ekkamai</b><small>牛肉麵・Here Hai</small></div></div>
+    <p class="small" style="margin:6px 0 0">實心站最推薦，Nana～Phrom Phong 兩站間走路約 10～15 分；太熱就搭 BTS 一站。我們住 Nana，Day 5 上午就是 Asok → Phrom Phong 這段。</p>
+  </div>
+</section>
+<section id="walk">
+  <h2>👟 必走</h2>
+  <div class="card"><div class="spot" style="--sc:#1f9d55"><h4>Nana・Soi 11（飯店這條） <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Sukhumvit+Soi+11+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><span class="tag t">每晚</span><p>我們飯店就在這。晚上酒吧、按摩店、餐廳林立：Above Eleven、Havana Social、Burapa 都在步行範圍。</p></div><div class="spot" style="--sc:#1f9d55"><h4>Terminal 21（Asok） <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Asok" target="_blank" rel="noopener">📍地圖</a></h4><span class="tag t">Day 5 上午</span><p>機場主題百貨，每層一個城市（東京、倫敦、伊斯坦堡…），廁所也有主題很好拍；BTS Asok／MRT Sukhumvit 直結。🕙 10:00～22:00</p></div><div class="spot" style="--sc:#1f9d55"><h4>Soi Cowboy 霓虹街 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Soi+Cowboy+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>Asok 站旁一整條霓虹招牌，晚上路過拍照很有曼谷感；這裡是成人酒吧街，拍拍照、走一圈就好。</p></div><div class="spot" style="--sc:#1f9d55"><h4>Benjakitti 森林公園空中步道 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Benjakitti+Forest+Park" target="_blank" rel="noopener">📍地圖</a></h4><span class="tag">傍晚最美</span><p>市中心的森林濕地公園，高架步道穿過樹梢，傍晚夕陽、晚上點燈都很美；免費。🕔 每天 05:00～21:00。BTS Asok 4 號出口走約 10 分，或 MRT Sukhumvit 3 號出口</p></div><div class="spot" style="--sc:#1f9d55"><h4>Phrom Phong：EmQuartier＋Emporium <a class="mp" href="https://www.google.com/maps/search/?api=1&query=EmQuartier+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><span class="tag t">Day 5</span><p>兩間高級百貨隔街相對，有天橋連 BTS Phrom Phong。EmQuartier 有螺旋餐廳層 Helix、Emporium 有超市 Gourmet Market 好買伴手禮；對面 Benjasiri 公園可休息。🕙 Emporium 10:00；EmQuartier 週一～四 11:00、週五～日 10:00</p></div><div class="spot" style="--sc:#1f9d55"><h4>Thong Lo 文青區 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Thong+Lo+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>日系、咖啡廳、餐酒館最多的一區；芒果糯米飯 Nings、Mae Varee、螃蟹炒飯 KINKIN 都在這。從 Nana 搭 BTS 4 站</p></div><div class="spot" style="--sc:#1f9d55"><h4>Ekkamai <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Ekkamai+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>在地人愛的美食區：Wattana Panich 老湯牛肉麵、Here Hai 蟹肉炒飯；再往前一站</p></div></div>
+</section>
+<section id="shop">
+  <h2>🛍️ 必逛</h2>
+  <div class="card"><div class="spot" style="--sc:#7b4fa0"><h4>Terminal 21 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Asok" target="_blank" rel="noopener">📍地圖</a></h4><p>平價服飾、小店多，價格親民；LG 有超市，5 樓有美食街 Pier 21。</p></div><div class="spot" style="--sc:#7b4fa0"><h4>EmQuartier <a class="mp" href="https://www.google.com/maps/search/?api=1&query=EmQuartier+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>精品＋設計品牌，頂樓花園、Helix 餐廳層美食很多。</p></div><div class="spot" style="--sc:#7b4fa0"><h4>Emporium＋Gourmet Market <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Emporium+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>高級超市 Gourmet Market 伴手禮一次買齊；記得問退稅單。</p></div><div class="spot" style="--sc:#7b4fa0"><h4>Boots／Watsons／Eveandboy 藥妝 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Eveandboy+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>藥妝、泰國品牌保養品；Eveandboy 品項最多。</p></div><div class="spot" style="--sc:#7b4fa0"><h4>Karmakamet <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Karmakamet+Diner+Sukhumvit" target="_blank" rel="noopener">📍地圖</a></h4><p>泰國香氛品牌，香包、精油、擴香很適合送禮；Soi 24 有 Diner 可吃甜點。</p></div>
+  <div class="note gold" style="margin-bottom:0">🧾 <b>退稅：</b>同一店家同一天滿 2,000 泰銖可開退稅單（要帶護照）；離境前在機場辦理，詳見手冊「提醒」。</div></div>
+</section>
+<section id="buy">
+  <h2>🎁 必買清單（可勾選）</h2>
+  <div class="card"><ul class="check" id="buylist" style="padding:0;margin:0"></ul>
+  <p class="small" style="margin-bottom:0">超市（Gourmet Market、Tops、Big C）通常比觀光區便宜；藥妝看 Boots、Watsons、Eveandboy。</p></div>
+</section>
+<section id="eat">
+  <h2>🍜 必吃</h2>
+  <div class="card"><div class="spot" style="--sc:#e8763f"><h4>Pier 21 美食街 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Pier+21+Terminal+21+Asok" target="_blank" rel="noopener">📍地圖</a></h4><p>Terminal 21 5 樓，一道 50 泰銖起，便宜又有冷氣。</p></div><div class="spot" style="--sc:#e8763f"><h4>Burapa（by Sri Trat） <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Burapa+Eastern+Thai+Cuisine+Sukhumvit+11" target="_blank" rel="noopener">📍地圖</a></h4><p>飯店旁米其林必比登，泰東部家傳菜，要訂位。</p></div><div class="spot" style="--sc:#e8763f"><h4>Rung Rueang 豬肉粿條 <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Rung+Rueang+Pork+Noodle" target="_blank" rel="noopener">📍地圖</a></h4><p>Soi 26 近 Phrom Phong，必比登，只收現金。</p></div><div class="spot" style="--sc:#e8763f"><h4>Nings Mango Stand／Mae Varee <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Nings+Mango+Stand+Thong+Lo" target="_blank" rel="noopener">📍地圖</a></h4><p>Thong Lo 站下的芒果糯米飯雙強。</p></div><div class="spot" style="--sc:#e8763f"><h4>KINKIN <a class="mp" href="https://www.google.com/maps/search/?api=1&query=KINKIN+Sukhumvit+47+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>螃蟹炒飯（蟹肉比飯多）、酸辣海鮮媽媽麵。</p></div><div class="spot" style="--sc:#e8763f"><h4>Wattana Panich <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Wattana+Panich+Ekkamai" target="_blank" rel="noopener">📍地圖</a></h4><p>Ekkamai 老湯燉牛肉麵，湯頭熬了幾十年。</p></div><div class="spot" style="--sc:#e8763f"><h4>Here Hai <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Here+Hai+Seafood+Bangkok" target="_blank" rel="noopener">📍地圖</a></h4><p>必比登蟹肉炒飯，Ekkamai。</p></div><div class="spot" style="--sc:#e8763f"><h4>SORN（米其林三星） <a class="mp" href="https://www.google.com/maps/search/?api=1&query=Sorn+Fine+Southern+Cuisine+Sukhumvit+26" target="_blank" rel="noopener">📍地圖</a></h4><p>泰南菜，要搶訂，詳見 <a href="food.html#star">美食分頁</a>。</p></div>
+  <p class="small" style="margin-bottom:0">更多店家與地圖：<a href="food.html">美食分頁</a>。</p></div>
+</section>
+<p class="small" style="text-align:center"><a href="./">← 回行程手冊</a></p>
+</div>
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+<script>
+const store={get(k,d){try{const v=localStorage.getItem('bkk27_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+set(k,v){try{localStorage.setItem('bkk27_'+k,JSON.stringify(v))}catch(e){}}};
+(function(id,items,key){const st=store.get(key,{});
+document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
+document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
+})('buylist',['🥭 乾芒果（7-11、超市都有）', '🍵 手標泰式茶 ChaTraMue（泰奶茶包）', '🌿 鼻通（Poy-Sian 八仙筒、Hong Thai）', '🧴 青草膏／薄荷油', '🍜 媽媽麵 Mama（冬蔭功口味）', '🦑 小老闆海苔 Tao Kae Noi', '🥥 椰子片、椰子油', '🌶️ 冬蔭功醬、綠咖哩醬', '🧋 泰奶即溶包', '🧼 蛇牌爽身粉', '💄 Mistine、Srichand、Beauty Buffet 藥妝', '🕯️ Karmakamet 香氛', '🎒 Naraya 曼谷包', '🐘 大象褲、大象零錢包（夜市便宜）', '🍫 金枕頭榴槤乾', '☕ Doi Chaang 泰北咖啡豆'],'buy');
+</script>
+</body>
+</html>
