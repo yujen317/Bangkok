@@ -196,7 +196,7 @@ function checklist(id,items,key){
   document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" data-i="${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
   document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
 }
-checklist('eatlist',['🥭 芒果糯米飯（2～4 月正是芒果季）','🍜 泰式炒河粉 Pad Thai','🦐 冬蔭功 Tom Yum Goong','🥗 青木瓜沙拉 Som Tam','🍳 打拋豬飯 Pad Kra Pao','🥣 船麵 Kuay Teow Reua','🍖 火山排骨 Leng Saeb','🍢 烤豬肉串 Moo Ping','🍌 香蕉煎餅 Roti','🧋 泰式奶茶 Cha Yen','🥥 椰子冰淇淋（Day 2 水上市場含一份）','🔥 泰式燒烤 Moo Kra Ta'],'eat');
+checklist('eatlist',['🥭 芒果糯米飯（2～4 月正是芒果季）','🍜 泰式炒河粉 Pad Thai','🦐 冬蔭功 Tom Yum Goong','🥗 青木瓜沙拉 Som Tam','🍳 打拋豬飯 Pad Kra Pao','🥣 船麵 Kuay Teow Reua','🍖 火山排骨 Leng Saeb','🍢 烤豬肉串 Moo Ping','🍌 香蕉煎餅 Roti','🧋 泰式奶茶 Cha Yen','🥥 椰子冰淇淋（Day 3 水上市場含一份）','🔥 泰式燒烤 Moo Kra Ta'],'eat');
 </script>
 </body>
 </html>
