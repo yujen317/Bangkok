@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🌙 曼谷夜市｜曼谷五天四夜</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{background:linear-gradient(150deg,#0f6b6b 0%,#14504f 55%,#3a2d14 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,190,90,.45),transparent 70%)}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85"><a href="./" style="color:#fff;text-decoration:none">← 回行程手冊</a></div>
+    <h1>曼谷夜市</h1>
+    <div class="sub">7 個夜市・營業時間・行程中哪天去</div>
+  </div>
+</header>
+<div class="wrap">
+<nav class="jump">
+  <a href="./">🏠 行程手冊</a>
+  <a href="#plan">🗓️ 每晚去哪</a>
+  <a href="#list">🌙 夜市介紹</a>
+  <a href="food.html">🍜 美食</a>
+</nav>
+<section id="plan">
+  <div class="card">
+    <h3 style="margin-top:0">🗓️ 每晚可以去哪</h3>
+    <div class="tbl"><table style="min-width:0">
+      <tr><th>晚上</th><th>夜市</th></tr>
+      <tr><td>Day 1・2/20（六）</td><td>Save One Go 邦納夜市（已排）</td></tr>
+      <tr><td>Day 2・2/21（日）</td><td>遊船晚餐後；體力夠可去火車夜市 Srinakarin（週日有開）</td></tr>
+      <tr><td>Day 3・2/22（一）</td><td>Jodd Fairs＋Train Night Market 同晚，或 Asiatique；唐人街多攤週一休</td></tr>
+      <tr><td>Day 4・2/23（二）</td><td>觀光巴士後順路逛唐人街</td></tr>
+    </table></div>
+  </div>
+</section>
+<section id="list">
+  <h2>🌙 夜市介紹</h2>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">Save One Go（Bangna 邦納夜市）</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Save+One+Go+Bangna+Night+Market" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">在地人愛去的超大夜市，小吃 5～10 泰銖起，便宜又多</div>
+    <div class="kv">
+      <b>交通</b><span>邦納，BTS 黃線 Sri Iam 站</span>
+      <b>時間</b><span>每天 16:00～23:00</span>
+      <b>行程</b><span><span class="tag t">Day 1 已排</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">Jodd Fairs Ratchada</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Jodd+Fairs+Ratchada" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">目前最熱門的觀光夜市，攤位多、乾淨好拍；火山排骨、烤海鮮、啤酒</div>
+    <div class="kv">
+      <b>交通</b><span>Ratchadaphisek 路，Big C Place Ratchada 旁，MRT 藍線可到（2025 年 7 月從 Rama 9 搬來）</span>
+      <b>時間</b><span>每天約 17:00～24:00</span>
+      <b>行程</b><span><span class="tag ">任一晚</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">Train Night Market Ratchada</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Train+Night+Market+Ratchada" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">比 Jodd Fairs 小而安靜，有古著區和酒吧區</div>
+    <div class="kv">
+      <b>交通</b><span>Esplanade Ratchada 後方，與 Jodd Fairs 只差一站 MRT，可走路</span>
+      <b>時間</b><span>每天 17:00～01:00（2026 年 3 月重新開幕）</span>
+      <b>行程</b><span><span class="tag ">可和 Jodd Fairs 同晚</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">Talad Rot Fai Srinakarin（火車夜市）</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Talad+Rot+Fai+Srinakarin" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">元祖火車夜市，規模最大；古董、古著、老車，氣氛最在地</div>
+    <div class="kv">
+      <b>交通</b><span>Seacon Square 後方，MRT 黃線可到，離市區較遠</span>
+      <b>時間</b><span>週四～週日 17:00～01:00</span>
+      <b>行程</b><span><span class="tag r">只有 Day 1（六）、Day 2（日）碰得到，較難排</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">Asiatique The Riverfront</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Asiatique+The+Riverfront" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">河岸夜市，有摩天輪、餐廳，夜景浪漫</div>
+    <div class="kv">
+      <b>交通</b><span>湄南河畔，BTS Saphan Taksin 站轉免費接駁船或搭車</span>
+      <b>時間</b><span>每天約 17:00～24:00</span>
+      <b>行程</b><span><span class="tag ">任一晚</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">唐人街（耀華力路）</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Yaowarat+Road+Chinatown+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">街頭小吃一條街：海鮮、粿條捲、魚丸麵、甜點</div>
+    <div class="kv">
+      <b>交通</b><span>MRT 藍線 Wat Mangkon 站</span>
+      <b>時間</b><span>傍晚約 17:00～24:00；許多攤位週一公休</span>
+      <b>行程</b><span><span class="tag t">Day 4（二）觀光巴士後最順路</span></span>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div style="font-weight:700;font-size:1.05rem">水門夜市（Pratunam）</div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Pratunam+Market+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin:6px 0">平價服飾、飾品、小吃</div>
+    <div class="kv">
+      <b>交通</b><span>水門市場一帶，近 CentralWorld、Platinum</span>
+      <b>時間</b><span>每天傍晚到深夜</span>
+      <b>行程</b><span><span class="tag ">逛完 Platinum 順路</span></span>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="note gold">💵 夜市大多只收現金，記得帶小額泰銖（20、100 鈔）。</div>
+  <div class="note tip">🍢 夜市必吃：火山排骨、烤海鮮、芒果糯米飯、香蕉煎餅、泰式奶茶。點餐說 <b>mai phet</b>（不要辣）。</div>
+  <div class="note imp">營業時間常有異動，出發前請再確認。</div>
+</section>
+<p class="small" style="text-align:center"><a href="./">← 回行程手冊</a></p>
+</div>
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+</body>
+</html>
