@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🚇 BTS・MRT 搭乘指南｜曼谷五天四夜</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{background:url("assets/pattern.svg") 0 0/200px repeat,linear-gradient(135deg,#d94a4a 0%,#e8763f 55%,#e8b04a 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden;text-shadow:0 1px 3px rgba(120,40,20,.35)}
+header.hero::after{content:"";position:absolute;right:max(8px,calc(50% - 370px));bottom:6px;width:96px;height:86px;background:url("assets/elephant.svg") center/contain no-repeat;pointer-events:none}
+@media(min-width:600px){header.hero::after{width:170px;height:153px;bottom:8px}}
+.hero h1,.hero .sub,.hero .count{position:relative;z-index:1}
+.count .box{background:rgba(255,255,255,.28)!important;border-color:rgba(255,255,255,.55)!important}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+</style>
+<style>.rt-it{padding:10px 0;border-top:1px dashed var(--line)}.rt-it:first-child{border-top:0}.yes{color:var(--teal);font-weight:700}.no{color:var(--red);font-weight:700}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85"><a href="./" style="color:#fff;text-decoration:none">← 回行程手冊</a></div>
+    <h1>BTS・MRT 搭乘指南</h1>
+    <div class="sub">從飯店出發怎麼搭・怎麼付錢</div>
+  </div>
+</header>
+<div class="wrap">
+<nav class="jump">
+  <a href="./">🏠 行程手冊</a>
+  <a href="#basic">🎫 怎麼付錢</a>
+  <a href="#hotel">📍 飯店最近</a>
+  <a href="#map">🗺️ 路線圖</a>
+  <a href="#routes">➡️ 怎麼搭</a>
+  <a href="#tips">💡 小提醒</a>
+</nav>
+
+<section id="basic">
+  <h2>🎫 BTS 和 MRT 差在哪</h2>
+  <div class="grid2">
+    <div class="card" style="border-top:6px solid #6cb33f">
+      <div style="font-weight:700;font-size:1.05rem">BTS 空鐵（高架）</div>
+      <div class="kv" style="margin-top:6px">
+        <b>路線</b><span>淺綠 Sukhumvit 線、深綠 Silom 線、金線</span>
+        <b>付款</b><span><b>不能刷信用卡</b>；買單程票（售票機）或辦 Rabbit 卡</span>
+        <b>票價</b><span>約 17～47 泰銖，延伸段最高約 65</span>
+      </div>
+    </div>
+    <div class="card" style="border-top:6px solid #1f4e9c">
+      <div style="font-weight:700;font-size:1.05rem">MRT 地鐵</div>
+      <div class="kv" style="margin-top:6px">
+        <b>路線</b><span>藍線（老城區、唐人街）、紫線、黃線、粉紅線</span>
+        <b>付款</b><span><b>直接刷感應式信用卡</b>（Visa／Mastercard／UnionPay，手機 Pay 也可），進出站刷同一張</span>
+        <b>票價</b><span>藍線約 17～44 泰銖</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>💳 各線付費方式一覽</h3>
+  <div class="card tbl" style="padding:6px 8px">
+    <table style="min-width:0">
+      <tr><th>路線</th><th>信用卡感應</th><th>Rabbit 卡</th><th>單程票</th></tr>
+      <tr><td><b>BTS 淺綠 Sukhumvit 線</b><div class="small">Nana、Asok、Siam、Thong Lo</div></td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓ 售票機</td></tr>
+      <tr><td><b>BTS 深綠 Silom 線</b><div class="small">Chong Nonsi、Saphan Taksin</div></td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓ 售票機</td></tr>
+      <tr><td><b>金線</b><div class="small">ICONSIAM</div></td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓ 單一票價約 17 泰銖</td></tr>
+      <tr><td><b>MRT 藍線・紫線</b><div class="small">老城區、唐人街、Jodd Fairs</div></td><td class="yes">✓ Visa／Master／UnionPay</td><td class="no">✕</td><td class="yes">✓ 代幣</td></tr>
+      <tr><td><b>MRT 黃線・粉紅線</b><div class="small">邦納夜市（Sri Iam）</div></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><b>機場快線 ARL</b><div class="small">Phaya Thai ↔ 蘇凡納布</div></td><td>以現場為準</td><td class="no">✕</td><td class="yes">✓ 代幣</td></tr>
+    </table>
+  </div>
+  <div class="note imp" style="margin-top:0"><b>MRT 藍線、紫線</b>自 2026/6/1 起全面改成感應刷卡，舊的 MRT 儲值卡不能用了；沒有感應卡就在售票機買單程代幣。刷外國信用卡可能有海外手續費，可以先問發卡銀行。</div>
+  <div class="note tip"><b>BTS 單程票：</b>售票機選站或票價，投硬幣或紙鈔（部分機器可掃泰國銀行 QR）；零錢不夠可到服務台換。</div>
+  <div class="note tip"><b>營運時間：</b>約 06:00～24:00。<b>Rabbit 卡</b>只能搭 BTS，不能搭 MRT；辦卡約 220 泰銖（120 製卡費＋至少儲值 100），要帶護照。只待 5 天、搭不多的話，買單程票就好。</div>
+  <div class="note gold"><b>票價可能調整：</b>泰國內閣已核定 BTS 各線改成統一票價 17～45 泰銖，預計 2027/1/1 上路，出發前可再確認。</div>
+</section>
+
+<section id="hotel">
+  <h2>📍 飯店最近的站</h2>
+  <div class="card">
+    <div class="kv">
+      <b>BTS</b><span><b>Nana 站</b>（淺綠線）・步行約 10 分，最近</span>
+      <b>MRT</b><span><b>Sukhumvit 站</b>（藍線）・步行約 15 分，和 BTS Asok 站相連</span>
+    </div>
+    <p class="small" style="margin-bottom:0">去老城區、唐人街、夜市搭 MRT 藍線；去商場、Thong Lo 搭 BTS。</p>
+  </div>
+</section>
+
+<section id="map">
+  <h2>🗺️ 常用站示意圖</h2>
+  <div class="card mapwrap"><svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'PingFang TC','Noto Sans TC',sans-serif">
+<g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M190 50 L190 200 L730 200" stroke="#6cb33f"/>
+  <path d="M100 200 L190 200 L260 250 L330 310 L330 390 L270 450 L210 480" stroke="#00796b"/>
+  <path d="M210 480 L130 520" stroke="#c9a227"/>
+  <path d="M510 40 L510 250 L510 310 L110 310 L80 340 L80 400" stroke="#1f4e9c"/>
+</g>
+<g font-size="16" fill="#2b2420" style="paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round">
+  <circle cx="190" cy="50" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="204" y="55" text-anchor="start">Victory Monument</text><text x="204" y="72" text-anchor="start" font-size="14" fill="#8a6414">船麵巷</text>
+  <circle cx="190" cy="120" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="204" y="125" text-anchor="start">Phaya Thai</text><text x="204" y="142" text-anchor="start" font-size="14" fill="#8a6414">機場快線轉乘</text>
+  <circle cx="100" cy="200" r="6" fill="#fff" stroke="#00796b" stroke-width="3"/><text x="100" y="162" text-anchor="middle">National Stadium</text><text x="100" y="179" text-anchor="middle" font-size="14" fill="#8a6414">MBK</text>
+  <circle cx="190" cy="200" r="10" fill="#fff" stroke="#2b2420" stroke-width="3.5"/><text x="176" y="232" text-anchor="end" font-weight="700">Siam</text><text x="176" y="249" text-anchor="end" font-size="14" fill="#8a6414">暹羅商圈</text>
+  <circle cx="260" cy="200" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="260" y="162" text-anchor="middle">Chit Lom</text><text x="260" y="179" text-anchor="middle" font-size="14" fill="#8a6414">CentralWorld</text>
+  <circle cx="330" cy="200" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="322" y="252" text-anchor="middle">Phloen Chit</text><text x="322" y="269" text-anchor="middle" font-size="14" fill="#8a6414">Central Embassy</text><line x1="330" y1="208" x2="326" y2="236" stroke="#bbb" stroke-width="1.5"/>
+  <circle cx="410" cy="200" r="13" fill="#e05a7a" stroke="#fff" stroke-width="3"/><text x="410" y="170" text-anchor="middle" font-weight="700">Nana ★ 飯店</text>
+  <circle cx="510" cy="200" r="10" fill="#fff" stroke="#2b2420" stroke-width="3.5"/><text x="498" y="236" text-anchor="end" font-weight="700">Asok／Sukhumvit</text><text x="498" y="253" text-anchor="end" font-size="14" fill="#8a6414">Terminal 21</text>
+  <circle cx="590" cy="200" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="590" y="162" text-anchor="middle">Phrom Phong</text><text x="590" y="179" text-anchor="middle" font-size="14" fill="#8a6414">EmQuartier</text>
+  <circle cx="660" cy="200" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="660" y="234" text-anchor="middle">Thong Lo</text><text x="660" y="251" text-anchor="middle" font-size="14" fill="#8a6414">Octave</text>
+  <circle cx="730" cy="200" r="6" fill="#fff" stroke="#6cb33f" stroke-width="3"/><text x="728" y="178" text-anchor="middle">Ekkamai</text>
+  <circle cx="510" cy="40" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="526" y="38" text-anchor="start">Thailand Cultural Centre</text><text x="526" y="55" text-anchor="start" font-size="14" fill="#8a6414">Jodd Fairs・火車夜市</text>
+  <circle cx="510" cy="100" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="526" y="105" text-anchor="start">Phra Ram 9</text>
+  <circle cx="510" cy="150" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="496" y="155" text-anchor="end">Phetchaburi</text>
+  <circle cx="510" cy="260" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="526" y="277" text-anchor="start">Queen Sirikit</text>
+  <circle cx="430" cy="310" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="430" y="340" text-anchor="middle">Lumphini</text><text x="430" y="357" text-anchor="middle" font-size="14" fill="#8a6414">Polo 炸雞</text>
+  <circle cx="330" cy="310" r="10" fill="#fff" stroke="#2b2420" stroke-width="3.5"/><text x="346" y="300" text-anchor="start" font-weight="700">Sala Daeng／Si Lom</text>
+  <circle cx="260" cy="250" r="6" fill="#fff" stroke="#00796b" stroke-width="3"/>
+  <circle cx="230" cy="310" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="230" y="340" text-anchor="middle">Sam Yan</text>
+  <circle cx="110" cy="310" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="110" y="284" text-anchor="middle">Wat Mangkon</text><text x="140" y="336" font-size="14" fill="#8a6414">唐人街</text>
+  <circle cx="80" cy="350" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="96" y="355" text-anchor="start">Sam Yot</text><text x="96" y="372" text-anchor="start" font-size="14" fill="#8a6414">金山寺・Thipsamai</text>
+  <circle cx="80" cy="400" r="6" fill="#fff" stroke="#1f4e9c" stroke-width="3"/><text x="96" y="405" text-anchor="start" font-weight="700">Sanam Chai</text><text x="96" y="422" text-anchor="start" font-size="14" fill="#8a6414">大皇宮・臥佛寺</text>
+  <circle cx="330" cy="390" r="6" fill="#fff" stroke="#00796b" stroke-width="3"/><text x="346" y="395" text-anchor="start" font-weight="700">Chong Nonsi</text><text x="346" y="412" text-anchor="start" font-size="14" fill="#8a6414">王權天空步道</text>
+  <circle cx="270" cy="450" r="6" fill="#fff" stroke="#00796b" stroke-width="3"/><text x="286" y="455" text-anchor="start">Saphan Taksin</text><text x="286" y="472" text-anchor="start" font-size="14" fill="#8a6414">轉船去 Asiatique</text>
+  <circle cx="210" cy="480" r="6" fill="#fff" stroke="#00796b" stroke-width="3"/><text x="226" y="488" text-anchor="start">Krung Thon Buri</text><text x="226" y="505" text-anchor="start" font-size="14" fill="#8a6414">轉金線</text>
+  <circle cx="130" cy="520" r="6" fill="#fff" stroke="#c9a227" stroke-width="3"/><text x="146" y="540" text-anchor="start" font-weight="700">Charoen Nakhon</text><text x="146" y="557" text-anchor="start" font-size="14" fill="#8a6414">ICONSIAM</text>
+</g>
+</svg>
+    <div class="legend">
+      <span><i style="background:#6cb33f"></i>BTS Sukhumvit 線</span>
+      <span><i style="background:#00796b"></i>BTS Silom 線</span>
+      <span><i style="background:#c9a227"></i>金線</span>
+      <span><i style="background:#1f4e9c"></i>MRT 藍線</span>
+      <span>⚪ 黑框＝轉乘站</span>
+    </div>
+    <p class="small" style="margin-bottom:0">只畫行程會用到的站，站與站之間省略了一些站，非實際比例。</p>
+  </div>
+</section>
+
+<section id="routes">
+  <h2>➡️ 從飯店出發怎麼搭</h2>
+  <div class="card" style="padding:4px 15px"><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🏯 大皇宮・臥佛寺</b><span class="tag t" style="flex:0 0 auto;align-self:flex-start">MRT 藍線</span></div><div style="margin-top:2px">MRT Sukhumvit → <b>Sanam Chai</b></div><div class="small">直達免轉乘，約 25 分；出站步行到臥佛寺約 5 分</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🍜 Thipsamai・金山寺</b><span class="tag t" style="flex:0 0 auto;align-self:flex-start">MRT 藍線</span></div><div style="margin-top:2px">MRT Sukhumvit → <b>Sam Yot</b></div><div class="small">直達，出站轉嘟嘟車或步行</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🏮 唐人街（耀華力路）</b><span class="tag t" style="flex:0 0 auto;align-self:flex-start">MRT 藍線</span></div><div style="margin-top:2px">MRT Sukhumvit → <b>Wat Mangkon</b></div><div class="small">直達，Day 4 宵夜回程最方便</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ Terminal 21</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Asok</b></div><div class="small">1 站，或步行約 14 分</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ EmQuartier／Emporium</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Phrom Phong</b></div><div class="small">2 站，站內直通商場</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ Central Embassy</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Phloen Chit</b></div><div class="small">1 站，空橋直通</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ CentralWorld・Big C・Platinum</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Chit Lom</b></div><div class="small">2 站，空橋走到 CentralWorld</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ Siam Paragon・Siam Center</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Siam</b></div><div class="small">3 站，站內直通</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🛍️ MBK</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS</span></div><div style="margin-top:2px">BTS Nana → Siam 轉深綠線 → <b>National Stadium</b></div><div class="small">Siam 同站換月台，1 站</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🏙️ 王權天空步道</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS</span></div><div style="margin-top:2px">BTS Nana → Siam 轉深綠線 → <b>Chong Nonsi</b></div><div class="small">Siam 轉乘後 3 站；出口有空橋到 King Power Mahanakhon</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🌉 ICONSIAM</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS＋金線</span></div><div style="margin-top:2px">BTS Nana → Siam 轉深綠線 → <b>Krung Thon Buri</b> 轉金線 → <b>Charoen Nakhon</b></div><div class="small">約 40～50 分，轉 2 次</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🎡 Asiatique</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS＋船</span></div><div style="margin-top:2px">BTS Nana → Siam 轉深綠線 → <b>Saphan Taksin</b></div><div class="small">2 號出口到 Sathorn 碼頭，轉 Asiatique 接駁船</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🌙 Jodd Fairs・火車夜市</b><span class="tag t" style="flex:0 0 auto;align-self:flex-start">MRT 藍線</span></div><div style="margin-top:2px">MRT Sukhumvit → <b>Thailand Cultural Centre</b></div><div class="small">3 站；Jodd Fairs 走 4 號出口，火車夜市（Esplanade 後方）走 3 號出口</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🍸 Thong Lo（Octave、Dry Wave）</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Thong Lo</b></div><div class="small">3 站；Octave 走 3 號出口</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🍲 Wattana Panich 牛肉麵</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Ekkamai</b></div><div class="small">4 站</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🥣 船麵巷</b><span class="tag " style="flex:0 0 auto;align-self:flex-start">BTS 綠線</span></div><div style="margin-top:2px">BTS Nana → <b>Victory Monument</b></div><div class="small">直達免轉乘（經 Siam），6 站</div></div><div class="rt-it"><div style="display:flex;justify-content:space-between;gap:8px"><b>🍗 Polo 炸雞</b><span class="tag t" style="flex:0 0 auto;align-self:flex-start">MRT 藍線</span></div><div style="margin-top:2px">MRT Sukhumvit → <b>Lumphini</b></div><div class="small">3 站</div></div></div>
+  <p class="small">站數以實際乘車為準；邦納夜市、火車夜市 Srinakarin 比較遠，建議直接叫 Grab。</p>
+</section>
+
+<section id="tips">
+  <h2>💡 小提醒</h2>
+  <div class="note imp"><b>BTS 單程票要留到出站</b>，出閘門時要插回去；MRT 進出刷同一張信用卡，換卡會被扣兩次錢。</div>
+  <div class="note tip"><b>尖峰時段</b>約 07:00～09:00、17:00～19:30 很擠，10 人同行最好避開，或分批上車、約好下車站集合。</div>
+  <div class="note tip"><b>BTS Siam</b> 是淺綠線和深綠線唯一的轉乘站，同站換月台不用出站。<b>Asok ↔ Sukhumvit</b>、<b>Sala Daeng ↔ Si Lom</b> 要出站走過去，BTS 和 MRT 分開付費。</div>
+  <div class="note gold"><b>站內禁止飲食</b>，也不能帶榴槤上車。</div>
+  <div class="note tip"><b>人多或趕時間：</b>3～4 人一台 Grab 常常跟搭捷運差不多錢；但下班時間 Sukhumvit 很塞，捷運比較準時。</div>
+</section>
+<p class="small" style="text-align:center"><a href="./">← 回行程手冊</a></p>
+</div>
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+</body>
+</html>
