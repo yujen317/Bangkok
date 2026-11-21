@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🍸 素坤逸區酒吧｜曼谷五天四夜</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{background:linear-gradient(150deg,#0f6b6b 0%,#14504f 55%,#3a2d14 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(232,190,90,.45),transparent 70%)}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85"><a href="./" style="color:#fff;text-decoration:none">← 回行程手冊</a></div>
+    <h1>素坤逸區酒吧</h1>
+    <div class="sub">高空酒吧・秘密酒吧・調酒吧</div>
+  </div>
+</header>
+<div class="wrap">
+<nav class="jump">
+  <a href="./">🏠 行程手冊</a>
+  <a href="#walk">🚶 步行可到</a>
+  <a href="#secret">🚪 秘密酒吧</a>
+  <a href="#ride">🚕 搭車可到</a>
+  <a href="#rules">👔 服裝規定</a>
+  <a href="food.html">🍜 美食</a>
+  <a href="night.html">🌙 夜市</a>
+</nav>
+<section id="walk">
+  <h2>🚶 飯店步行 5～10 分・每晚一家</h2>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Rainforest Rooftop</div><div class="small">Mövenpick Sukhumvit 15</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Rainforest+Rooftop+Movenpick+Sukhumvit+15" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag t">Day 1・2/20（六）</span></div>
+    <div style="margin:6px 0">輕鬆隨性，有 Happy Hour；視野不如其他幾家</div>
+    <div class="kv"><b>距離</b><span>步行約 5～10 分</span><b>注意</b><span>無服裝規定</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Pastel</div><div class="small">Aira Hotel 22 樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Pastel+Rooftop+Aira+Hotel+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag t">Day 2・2/21（日）</span></div>
+    <div style="margin:6px 0">地中海料理加 DJ，裝潢漂亮，適合約會</div>
+    <div class="kv"><b>距離</b><span>步行約 5～10 分</span><b>注意</b><span>價位偏高，週一公休</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Above Eleven</div><div class="small">Fraser Suites 頂樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Above+Eleven+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag t">Day 3・2/22（一）</span></div>
+    <div style="margin:6px 0">這一帶最有名的高空酒吧，秘魯日式融合料理（Nikkei），全景夜景</div>
+    <div class="kv"><b>營業</b><span>每天 17:00～02:00</span><b>注意</b><span>看夕陽一開門就到；先訂位；勿穿拖鞋短褲</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Japanish Rooftop</div><div class="small">Ramada 19 樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Japanish+Rooftop+Ramada+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag t">Day 4・2/23（二）</span></div>
+    <div style="margin:6px 0">日式裝潢配城市天際線，生魚片、海鮮飯評價好</div>
+    <div class="kv"><b>營業</b><span>到凌晨 4 點，適合晚場</span></div>
+  </div>
+</section>
+<section id="secret">
+  <h2>🚪 秘密酒吧</h2>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Havana Social</div><div class="small">Sukhumvit Soi 11・秘密酒吧</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Havana+Social+Bangkok" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag o">隱藏酒吧</span></div>
+    <div style="margin:6px 0">藏在巷子裡的電話亭後面，撥密碼才會開門，裡面是 1940～50 年代古巴風格；週末有現場古巴樂團，蘭姆酒選擇很多</div>
+    <div class="kv"><b>距離</b><span>飯店步行幾分鐘</span><b>營業</b><span>每天 18:00～02:00</span><b>進門</b><span>電話亭撥 1959（密碼可能更換，進不去就打電話問）</span><b>服裝</b><span>Smart casual；男生穿露趾鞋會被擋</span><b>推薦</b><span>週五去聽現場樂團，點 daiquiri</span></div>
+  </div>
+</section>
+<section id="ride">
+  <h2>🚕 搭車 10～20 分</h2>
+  <p class="small" style="margin-top:-6px">都可以拿來替換上面任一晚。</p>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Octave Rooftop</div><div class="small">Bangkok Marriott Sukhumvit 45～49 樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Octave+Rooftop+Bar+Marriott+Sukhumvit" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag">Thong Lo</span></div>
+    <div style="margin:6px 0">佔飯店頂樓三層，360 度景觀；稍微離開熱門觀光區，通常比市中心的高空酒吧容易有位子</div>
+    <div class="kv"><b>交通</b><span>BTS Thong Lo 站 3 號出口，出站就到；從 Nana 搭 BTS 約 5 站</span><b>營業</b><span>每天約 17:00～01:00（各來源寫 01:00～02:00，出發前確認）</span><b>服裝</b><span>Casual chic；男生不能穿運動服、夾腳拖、無袖</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Sky on 20</div><div class="small">Novotel Sukhumvit 20・26 樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Sky+on+20+Novotel+Sukhumvit+20" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag">Asok</span></div>
+    <div style="margin:6px 0">不浮誇的小型屋頂酒吧，價位親民、可以好好聊天；看得到公園綠地</div>
+    <div class="kv"><b>交通</b><span>Sukhumvit Soi 20，BTS Asok／Phrom Phong 附近</span><b>營業</b><span>約 17:00～01:00</span><b>小撇步</b><span>17:00～19:00 Happy Hour 剛好接夕陽；電梯到 25 樓再走一層樓梯</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Sanctuary</div><div class="small">InterContinental Bangkok Sukhumvit 34 樓</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Sanctuary+InterContinental+Bangkok+Sukhumvit" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag">2025 新開</span></div>
+    <div style="margin:6px 0">植物系高空酒吧，主打植物調酒</div>
+    <div class="kv"><b>營業</b><span>每天約 17:00～24:00</span></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <div><div style="font-weight:700;font-size:1.05rem">Dry Wave Cocktail Studio</div><div class="small">Thonglor Soi 13</div></div>
+      <a class="btn sm ghost" style="flex:0 0 auto;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Dry+Wave+Cocktail+Studio+Thonglor" target="_blank" rel="noopener">📍 地圖</a>
+    </div>
+    <div style="margin-top:4px"><span class="tag o">亞洲 50 最佳</span></div>
+    <div style="margin:6px 0">2024 年開幕就竄紅的調酒吧，經典調酒重新詮釋；2026 亞洲 50 最佳酒吧第 4 名、泰國最佳酒吧</div>
+    <div class="kv"><b>交通</b><span>BTS Thong Lo 轉 Grab 進 Thonglor 巷內</span><b>注意</b><span>座位少、熱門，建議先訂位</span></div>
+  </div>
+</section>
+<section id="rules">
+  <h2>👔 去之前看一下</h2>
+  <div class="note imp"><b>服裝：</b>高空酒吧大多是 smart casual，男生避免短褲、夾腳拖、無袖、運動服。穿太隨便會被擋在門口。</div>
+  <div class="note tip"><b>夕陽：</b>2 月曼谷日落約 18:30，想看夕陽 17:30 前入座；熱門的（Above Eleven、Octave）先訂位。</div>
+  <div class="note gold"><b>Happy Hour：</b>多半在傍晚 17:00～19:00 前後，買一送一或打折，各家不同，以現場公告為準。</div>
+  <div class="note imp"><b>附近環境：</b>Nana Plaza（Soi 4）與 Soi Cowboy 為成人娛樂區，晚上較喧鬧，有長輩同行可先提醒。</div>
+  <p class="small">營業時間與規定常有變動，出發前請再確認。</p>
+</section>
+<p class="small" style="text-align:center"><a href="./">← 回行程手冊</a></p>
+</div>
+<button class="toTop" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+</body>
+</html>
