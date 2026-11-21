@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax meet">
+<g fill="#fff" fill-opacity=".22">
+  <!-- ground -->
+  <rect x="0" y="160" width="1200" height="10"/>
+  <!-- Prang (Wat Arun style) -->
+  <g transform="translate(40 0)">
+    <path d="M70 8 L74 30 L80 30 L84 52 L92 52 L97 80 L106 80 L112 112 L122 112 L128 160 L12 160 L18 112 L28 112 L34 80 L43 80 L48 52 L56 52 L60 30 L66 30 Z"/>
+    <rect x="66" y="0" width="8" height="10" rx="2"/>
+    <path d="M20 160 L28 130 L36 160Z M104 160 L112 130 L120 160Z"/>
+  </g>
+  <!-- small prangs -->
+  <path d="M200 160 L206 120 L210 120 L214 92 L218 92 L222 120 L226 120 L232 160Z"/>
+  <!-- Thai temple hall (ubosot) with tiered roofs & chofa -->
+  <g transform="translate(260 0)">
+    <rect x="30" y="118" width="180" height="42"/>
+    <path d="M10 124 L120 46 L230 124 Z"/>
+    <path d="M40 104 L120 34 L200 104 Z" opacity=".85"/>
+    <path d="M70 80 L120 24 L170 80 Z" opacity=".75"/>
+    <!-- chofa horns -->
+    <path d="M120 24 C116 14 124 10 126 16 C128 20 124 24 120 24Z"/>
+    <path d="M10 124 C2 118 4 108 12 112Z M230 124 C238 118 236 108 228 112Z"/>
+    <path d="M40 104 C33 98 35 90 42 94Z M200 104 C207 98 205 90 198 94Z"/>
+    <!-- door -->
+    <rect x="108" y="130" width="24" height="30" rx="12" fill-opacity="0" stroke="#fff" stroke-width="0"/>
+  </g>
+  <!-- Chedi (bell stupa) -->
+  <g transform="translate(540 0)">
+    <path d="M60 4 L64 50 L56 50 Z"/>
+    <path d="M52 50 h16 v8 h-16z"/>
+    <path d="M60 56 C30 70 22 100 18 126 L102 126 C98 100 90 70 60 56 Z"/>
+    <rect x="8" y="126" width="104" height="12"/>
+    <rect x="0" y="138" width="120" height="22"/>
+  </g>
+  <!-- palms -->
+  <g transform="translate(690 0)">
+    <path d="M30 160 C34 130 36 110 34 82 L38 82 C40 110 40 130 36 160Z"/>
+    <path d="M36 84 C20 70 6 74 0 84 C14 78 26 80 36 86Z M36 84 C52 70 66 74 72 84 C58 78 46 80 36 86Z M36 84 C30 66 34 56 42 52 C38 64 38 74 38 86Z"/>
+  </g>
+  <!-- second hall smaller -->
+  <g transform="translate(790 20)">
+    <rect x="20" y="104" width="120" height="36"/>
+    <path d="M6 108 L80 52 L154 108 Z"/>
+    <path d="M30 92 L80 42 L130 92 Z" opacity=".85"/>
+    <path d="M80 42 C76 32 84 28 86 34 C88 38 84 42 80 42Z"/>
+    <path d="M6 108 C-2 102 0 92 8 96Z M154 108 C162 102 160 92 152 96Z"/>
+  </g>
+  <!-- twin small chedi -->
+  <path d="M975 160 L975 140 C975 126 985 118 990 112 L992 92 L994 112 C999 118 1009 126 1009 140 L1009 160Z"/>
+  <path d="M1020 160 L1020 144 C1020 134 1028 128 1032 122 L1034 106 L1036 122 C1040 128 1048 134 1048 144 L1048 160Z"/>
+  <!-- prang 2 -->
+  <g transform="translate(1070 30)">
+    <path d="M50 6 L53 24 L58 24 L61 42 L67 42 L71 66 L78 66 L84 130 L16 130 L22 66 L29 66 L33 42 L39 42 L42 24 L47 24 Z"/>
+    <rect x="47" y="0" width="6" height="8" rx="2"/>
+  </g>
+</g>
+</svg>
