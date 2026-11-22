@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>重點概要行程表｜曼谷手冊</title>
+<style>
+:root{
+  --bg:#fbf7f0; --card:#ffffff; --ink:#2b2420; --muted:#7a6d63; --line:#eadfce;
+  --gold:#c8962e; --gold-soft:#f7ecd3; --teal:#0f6b6b; --teal-soft:#dff0ee;
+  --orchid:#a0447a; --orchid-soft:#f6e4ee; --red:#c0392b; --red-soft:#fbe7e4;
+  --d1:#2f6fd0; --d2:#e0703a; --d3:#8a7fb8; --d4:#1e9e6a; --d5:#5b6b7a;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px;-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 80px}
+header.hero{--tmpl:1;background:url("assets/temples.svg") center bottom/auto 62% repeat-x,url("assets/pattern.svg") 0 0/200px repeat,linear-gradient(135deg,#d94a4a 0%,#e8763f 55%,#e8b04a 100%);color:#fff;padding:28px 18px 22px;border-radius:0 0 26px 26px;position:relative;overflow:hidden;text-shadow:0 1px 3px rgba(120,40,20,.35)}
+header.hero::after{content:"";position:absolute;right:max(8px,calc(50% - 370px));bottom:6px;width:96px;height:86px;background:url("assets/elephant.svg") center/contain no-repeat;pointer-events:none}
+@media(max-width:599px){header.hero{background-size:auto 40%,200px,auto}}
+@media(min-width:600px){header.hero::after{width:170px;height:153px;bottom:8px}}
+.hero h1,.hero .sub,.hero .count{position:relative;z-index:1}
+.count .box{background:rgba(255,255,255,.28)!important;border-color:rgba(255,255,255,.55)!important}
+.hero h1{margin:0 0 4px;font-size:1.6rem;letter-spacing:.5px}
+.hero .sub{opacity:.9;font-size:.95rem}
+.count{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.count .box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:6px 10px;text-align:center;min-width:62px}
+.count .n{font-size:1.4rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count .l{font-size:.72rem;opacity:.85}
+.count .msg{align-self:center;font-size:.85rem;opacity:.9}
+nav.jump{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -14px;padding:8px 14px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.85rem;white-space:nowrap}
+nav.jump a:active{background:var(--gold-soft)}
+section{scroll-margin-top:60px;margin-top:26px}
+h2{font-size:1.25rem;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+h3{font-size:1.05rem;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.93rem}
+.kv b{color:var(--muted);font-weight:500}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--gold-soft);color:#8a6414;margin:2px 4px 2px 0}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.o{background:var(--orchid-soft);color:var(--orchid)}
+.tag.r{background:var(--red-soft);color:var(--red)}
+.note{border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.note.imp{background:var(--red-soft);border-left:4px solid var(--red)}
+.note.tip{background:var(--teal-soft);border-left:4px solid var(--teal)}
+.note.gold{background:var(--gold-soft);border-left:4px solid var(--gold)}
+.flight{display:flex;align-items:center;gap:10px}
+.flight .ap{text-align:center;min-width:64px}
+.flight .ap .code{font-size:1.5rem;font-weight:700;letter-spacing:1px}
+.flight .ap .t{font-size:1.05rem;font-weight:600;color:var(--teal)}
+.flight .ap .c{font-size:.75rem;color:var(--muted)}
+.flight .mid{flex:1;text-align:center;font-size:.8rem;color:var(--muted)}
+.flight .mid .line{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);margin:4px 0}
+.copy{border:1px solid var(--line);background:#fff;border-radius:8px;padding:2px 8px;font-size:.78rem;cursor:pointer;color:var(--teal);margin-left:4px}
+.copy.ok{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn{border:1px solid var(--teal);background:var(--teal);color:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--teal)}
+.btn.sm{padding:4px 10px;font-size:.8rem}
+.daybar{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.daybar button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px;font-size:.85rem;cursor:pointer;line-height:1.25;text-align:center}
+.daybar button small{display:block;font-size:.7rem;color:var(--muted)}
+.daybar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.daybar button.on small{color:#e9dcc6}
+.day{border-left:6px solid var(--dc,var(--gold))}
+.day .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.day .dh h3{margin:0;font-size:1.1rem}
+.day .meta{font-size:.8rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.tl{list-style:none;margin:6px 0 0;padding:0}
+.tl li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.tl .tm{font-weight:700;color:var(--dc,var(--teal));font-variant-numeric:tabular-nums;font-size:.9rem}
+.tl .ti{font-weight:600}
+.tl .ds{font-size:.88rem;color:var(--muted)}
+.tl .pin{text-decoration:none;font-size:.8rem;margin-left:4px;white-space:nowrap}
+.meals{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.meals span{font-size:.78rem;background:#faf5ec;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+th{background:#faf5ec;color:var(--muted);font-weight:600;font-size:.8rem}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl table{min-width:520px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+details>summary{cursor:pointer;padding:12px 15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--gold);font-weight:700}
+details[open]>summary::after{content:"－"}
+details .in{padding:0 15px 14px}
+.train{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center}
+.train div{background:#faf5ec;border-radius:10px;padding:8px}
+.train .big{font-size:1.2rem;font-weight:700;color:var(--teal)}
+.train .hl{background:var(--teal);color:#fff}
+.train .hl .big{color:#fff}
+input,select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff;width:100%}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}
+.conv .out{font-size:1.5rem;font-weight:700;color:var(--teal);text-align:center;margin:8px 0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.quick button{border:1px solid var(--line);background:#faf5ec;border-radius:8px;padding:4px 10px;font-size:.82rem;cursor:pointer}
+.ledger-list{margin-top:10px}
+.ledger-list .it{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px dashed var(--line);font-size:.88rem}
+.ledger-list .it .x{color:var(--red);cursor:pointer;border:0;background:none;font-size:1rem}
+.bal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin-top:8px}
+.bal div{background:#faf5ec;border-radius:8px;padding:6px 8px;font-size:.82rem}
+.bal .pos{color:var(--teal);font-weight:700}
+.bal .neg{color:var(--red);font-weight:700}
+.phr{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.phr:first-child{border-top:0}
+.phr .zh{font-weight:600}
+.phr .th{font-size:1.15rem}
+.phr .rd{font-size:.8rem;color:var(--muted)}
+.check li{list-style:none;margin:4px 0}
+.check label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.check input{width:auto;margin-top:5px}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:4px}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
+.toTop{position:fixed;right:14px;bottom:18px;background:var(--ink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;z-index:30}
+.small{font-size:.82rem;color:var(--muted)}
+.mp{text-decoration:none;font-size:.8rem;white-space:nowrap;margin-left:2px;font-weight:600}
+.fchips{display:flex;flex-wrap:wrap;gap:6px}.fchips button{border:1px solid var(--cc);background:#fff;color:var(--cc);border-radius:999px;padding:4px 10px;font-size:.82rem;cursor:pointer;opacity:.55}.fchips button.on{background:var(--cc);color:#fff;opacity:1}
+.fpin span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);font-size:15px}
+.farea{margin:0 0 10px}.farea>b{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}.fit{display:block;text-decoration:none;color:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:4px;background:#fff}.fit small{display:block;color:var(--muted);font-size:.75rem}
+.line{display:flex;align-items:flex-start;overflow-x:auto;padding:6px 2px 4px;gap:0}
+.st{flex:0 0 auto;text-align:center;width:92px;position:relative}
+.st:before{content:"";position:absolute;top:13px;left:-46px;width:92px;height:4px;background:#1f9d55}
+.st:first-child:before{display:none}
+.st .dot{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;background:#fff;border:4px solid #1f9d55;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
+.st.hot .dot{background:#1f9d55;color:#fff}
+.st b{display:block;font-size:.85rem}.st small{display:block;font-size:.72rem;color:var(--muted);line-height:1.3}
+.must{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0 10px}
+.must a{text-decoration:none;color:#fff;border-radius:12px;padding:10px 4px;text-align:center;font-weight:700;font-size:.95rem}
+.must a span{display:block;font-size:1.4rem}
+.spot{border-left:5px solid var(--sc);padding-left:10px;margin:0 0 12px}
+.spot h4{margin:0 0 2px;font-size:1rem}.spot p{margin:2px 0;font-size:.9rem}
+.sum{width:100%;border-collapse:collapse;font-size:.9rem;background:#fff}
+.sum th,.sum td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}
+.sum th{background:#c0392b;color:#fff;font-weight:700}
+.sum td.d{white-space:nowrap;font-weight:700}
+.sum td.d small{display:block;font-weight:400;color:var(--muted)}
+.sum ul{margin:0;padding-left:1.1em}.sum li{margin:2px 0}
+.sum td.free{color:var(--muted);font-style:italic}
+.meal{font-size:.85rem;line-height:1.6}
+@media print{.jump,#jaBtn,.toTop,.noprint{display:none!important}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <div style="font-size:.85rem;opacity:.85" class="noprint"><a href="./" style="color:#fff;text-decoration:none">← 回行程手冊</a></div>
+    <h1>曼谷五天四夜・重點概要</h1>
+    <div class="sub">2027/2/20（六）～ 2/24（三）｜11 人｜高雄 ⇄ 曼谷</div>
+  </div>
+</header>
+<div class="wrap">
+<section>
+  <div class="card" style="padding:10px;overflow-x:auto">
+    <table class="sum">
+      <tr><th>日期</th><th>行程</th><th>餐食・住宿</th></tr>
+<tr><td class="d">Day 1<small>2/20（六）</small></td><td><ul><li>14:45 高雄小港起飛（CI839）</li><li>17:35 抵達曼谷蘇凡納布機場</li><li>邦納夜市</li><li>入住飯店</li></ul></td><td class="meal">早：—<br>午：自理<br>晚：火山排骨<hr style="border:0;border-top:1px dashed var(--line);margin:6px 0">🏨 Nysa Sukhumvit 11</td></tr>
+<tr><td class="d">Day 2<small>2/21（日）</small></td><td class="free">自由活動</td><td class="meal">早：飯店<br>午：自理<br>晚：自理<hr style="border:0;border-top:1px dashed var(--line);margin:6px 0">🏨 Nysa Sukhumvit 11</td></tr>
+<tr><td class="d">Day 3<small>2/22（一）</small></td><td><ul><li>丹能沙朵水上市場</li><li>美功鐵道市場</li><li>泰式風味餐</li><li>鄭王廟</li><li>夜遊湄南河遊船</li></ul></td><td class="meal">早：飯店<br>午：泰式風味餐<br>晚：遊船自助餐<hr style="border:0;border-top:1px dashed var(--line);margin:6px 0">🏨 Nysa Sukhumvit 11</td></tr>
+<tr><td class="d">Day 4<small>2/23（二）</small></td><td><ul><li>大皇宮＋玉佛寺</li><li>王權天空步道 King Power Mahanakhon</li><li>米其林觀光巴士</li><li>唐人街</li></ul></td><td class="meal">早：飯店<br>午：自理<br>晚：米其林觀光巴士<hr style="border:0;border-top:1px dashed var(--line);margin:6px 0">🏨 Nysa Sukhumvit 11</td></tr>
+<tr><td class="d">Day 5<small>2/24（三）</small></td><td><ul><li>退房・寄放行李</li><li>崧越路逛街</li><li>14:30 前往機場</li><li>18:35 曼谷起飛（CI840）</li><li>22:55 抵達高雄</li></ul></td><td class="meal">早：飯店<br>午：自理<br>晚：機上<hr style="border:0;border-top:1px dashed var(--line);margin:6px 0">🏨 溫暖的家</td></tr>
+    </table>
+  </div>
+  <div class="card small">
+    ✈️ 去程 CI839 高雄 14:45 → 曼谷 17:35｜回程 CI840 曼谷 18:35 → 高雄 22:55<br>
+    🏨 Nysa Hotel Bangkok Sukhumvit 11（4 晚・含早餐）
+  </div>
+  <p class="small noprint" style="text-align:center">詳細行程、選配與地圖請看 <a href="./">行程手冊</a>｜<a href="#" onclick="print();return false">🖨️ 列印／存成 PDF</a></p>
+</section>
+</div>
+<a id="jaBtn" href="#" style="position:fixed;left:14px;bottom:18px;z-index:31;background:#fff;color:#c0392b;border:2px solid #c0392b;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18)">🇯🇵 日本語</a>
+<script>
+(function(){var b=document.getElementById('jaBtn'),h=location.hostname,p=location.pathname,s='yujen317.github.io';
+if(h.indexOf('translate.goog')>-1){b.textContent='🇹🇼 中文';b.href='https://'+s+p+location.hash;}
+else{b.href='https://'+s.replace(/\./g,'-')+'.translate.goog'+(h===s?p:'/Bangkok/'+(p.split('/').pop()||'index.html'))+'?_x_tr_sl=zh-TW&_x_tr_tl=ja&_x_tr_hl=ja'+location.hash;}
+})();
+</script>
+</body>
+</html>
