@@ -204,5 +204,12 @@ document.getElementById(id).innerHTML=items.map((t,i)=>`<li><label><input type="
 document.getElementById(id).onchange=e=>{const s=store.get(key,{});s[e.target.dataset.i]=e.target.checked;store.set(key,s)};
 })('buylist',['🥭 乾芒果（7-11、超市都有）', '🍵 手標泰式茶 ChaTraMue（泰奶茶包）', '🌿 鼻通（Poy-Sian 八仙筒、Hong Thai）', '🧴 青草膏／薄荷油', '🍜 媽媽麵 Mama（冬蔭功口味）', '🦑 小老闆海苔 Tao Kae Noi', '🥥 椰子片、椰子油', '🌶️ 冬蔭功醬、綠咖哩醬', '🧋 泰奶即溶包', '🧼 蛇牌爽身粉', '💄 Mistine、Srichand、Beauty Buffet 藥妝', '🕯️ Karmakamet 香氛', '🎒 Naraya 曼谷包', '🐘 大象褲、大象零錢包（夜市便宜）', '🍫 金枕頭榴槤乾', '☕ Doi Chaang 泰北咖啡豆'],'buy');
 </script>
+<a id="jaBtn" href="#" style="position:fixed;left:14px;bottom:18px;z-index:31;background:#fff;color:#c0392b;border:2px solid #c0392b;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18)">🇯🇵 日本語</a>
+<script>
+(function(){var b=document.getElementById('jaBtn'),h=location.hostname,p=location.pathname,s='yujen317.github.io';
+if(h.indexOf('translate.goog')>-1){b.textContent='🇹🇼 中文';b.href='https://'+s+p+location.hash;}
+else{b.href='https://'+s.replace(/\./g,'-')+'.translate.goog'+(h===s?p:'/Bangkok/'+(p.split('/').pop()||'index.html'))+'?_x_tr_sl=zh-TW&_x_tr_tl=ja&_x_tr_hl=ja'+location.hash;}
+})();
+</script>
 </body>
 </html>
