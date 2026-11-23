@@ -130,6 +130,7 @@ footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}
 .mp{text-decoration:none;font-size:.8rem;white-space:nowrap;margin-left:2px;font-weight:600}
 .mems{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:.95rem}.mem{background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:999px;padding:3px 11px;font-weight:600;font-size:.88rem}.mem small{margin-left:3px;font-size:.72rem;font-weight:700;opacity:.9}
 </style>
+<link rel="stylesheet" href="assets/mobile.css">
 </head>
 <body>
 
@@ -712,8 +713,8 @@ function renderDays(sel){
   document.querySelectorAll('.rt').forEach(g=>{g.style.opacity=(!sel||+g.dataset.d===sel)?1:.12});
   store.set('day',sel);
 }
-document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b)renderDays(+b.dataset.d)});
-(function(){const now=new Date();let def=store.get('day',0);
+document.getElementById('daybar').addEventListener('click',e=>{const b=e.target.closest('button');if(b){renderDays(+b.dataset.d);const y=document.getElementById('dayList').getBoundingClientRect().top+scrollY-120;if(scrollY>y)scrollTo({top:y,behavior:'smooth'})}});
+(function(){const now=new Date();let def=store.get('day',1);
   DAYS.forEach(x=>{const [mm,dd]=x.date.split('/');const dt=new Date(`2027-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}T00:00:00+07:00`);if(now>=dt&&now-dt<864e5)def=x.d});
   renderDays(def)})();
 
@@ -796,5 +797,6 @@ if(h.indexOf('translate.goog')>-1){b.textContent='🇹🇼 中文';b.href='https
 else{b.href='https://'+s.replace(/\./g,'-')+'.translate.goog'+(h===s?p:'/Bangkok/'+(p.split('/').pop()||'index.html'))+'?_x_tr_sl=zh-TW&_x_tr_tl=ja&_x_tr_hl=ja'+location.hash;}
 })();
 </script>
+<script src="assets/mobile.js"></script>
 </body>
 </html>

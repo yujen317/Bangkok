@@ -1,0 +1,29 @@
+/* ===== 手機版優化 ===== */
+.btab{display:none}
+@media(max-width:599px){
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .btab{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #e8dfd2;padding:4px 4px calc(4px + env(safe-area-inset-bottom))}
+  .btab a{flex:1;text-align:center;text-decoration:none;color:#5b4d43;font-size:.68rem;padding:4px 0;border-radius:10px;line-height:1.2}
+  .btab a span{display:block;font-size:1.3rem;line-height:1.3}
+  .btab a.on{color:#c0392b;font-weight:700;background:#fdecea}
+  .toTop{bottom:calc(76px + env(safe-area-inset-bottom))!important}
+  /* 每日行程切換列黏在上方 */
+  .daybar{position:sticky;top:52px;z-index:15;background:rgba(251,247,240,.96);margin:0 -14px 8px;padding:6px 14px 8px}
+  /* 表格 → 卡片 */
+  table.mcard,table.mcard tbody,table.mcard tr,table.mcard td{display:block;width:100%}
+  table.mcard{min-width:0!important}
+  table.mcard tr.mh{display:none}
+  table.mcard tr{background:#fff;border:1px solid #e8dfd2;border-radius:12px;margin:0 0 10px;padding:8px 12px}
+  table.mcard td{border:0;padding:3px 0}
+  table.mcard td:first-child{font-weight:700;font-size:.95rem;padding-bottom:4px;border-bottom:1px dashed #e8dfd2;margin-bottom:4px}
+  table.mcard td[data-l]:not(:first-child)::before{content:attr(data-l);display:block;font-size:.7rem;color:#8a7d72;font-weight:600}
+  table.mcard td:empty{display:none}
+  .tbl{overflow:visible}
+  table.m3{min-width:0!important;font-size:.84rem}
+  table.m3 td,table.m3 th{padding:7px 4px}
+  table.m3 td:first-child{width:32%}
+  /* 次要區塊收合 */
+  section.fold>h2{cursor:pointer}
+  section>h2 .fx{margin-left:auto;font-size:.8rem;color:#8a7d72;font-weight:500}
+  section.fold.shut>*:not(h2){display:none!important}
+}
